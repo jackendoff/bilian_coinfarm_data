@@ -11,8 +11,8 @@ def get_data(url):
     results = requests.post(url)
     data = results.content.decode()  # str
     dict_data = eval(data)  # dict
-
-    return dict_data
+    print(dict_data)
+    # return dict_data
 
 
 if __name__ == '__main__':
