@@ -1,0 +1,4580 @@
+/home/jackendoff/.virtualenvs/bilian/bin/python /home/jackendoff/PycharmProjects/bilian/get_coinfarm_data.py
+
+<html>
+<head>
+   
+
+<title>coinfarm bitmex margin long short position</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="coinfarm.online"/>
+<meta name="Author" content="coinfarm.online"/>
+<meta name="Keywords" content="coinfarm,bitmex,bitcoin,position,margin,포지션,공개,마진,비트코인,비트맥스,코인팜,포지션,비맥,롱숏,비율,스켈핑"/>
+<meta name="Description" content="bitcoin margin trade,bitmex,bitfinex,position,코인팜,비트맥스,마진,거래정보,포지션,공개,정보,롱숏 비율,스켈핑"/>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="coinfarm,코인팜"/>
+<meta property="og:locale" content="ko_KR"/>
+<meta property="og:title" content="coinfarm bitcoin margin information bitmex, bitfinex" />
+<meta property="og:image" content="https://coinfarm.online/logo.png"/>
+<meta property="og:image:alt" content="coinfarm"/>
+<meta property="og:keywords" content="coinfarm,bitmex,bitcoin,position,margin,포지션,공개,마진,비트코인,비트맥스,코인팜,포지션,비맥, 롱숏비율,스켈핑" />
+<meta property="og:description" content="bitcoin margin, trade,bitmex,bitfinex,position, 코인팜, 비트맥스,마진,거래정보,포지션,공개,정보,롱숏, 비율,스켈핑" />
+<meta property="og:url" content="https://coinfarm.online/" />
+
+
+<meta itemprop="headline" content="coinfarm 코인팜"/>
+<meta itemprop="description" content="bitcoin margin,trade,bitmex,bitfinex,position,코인팜,비트맥스,마진,거래정보,포지션,공개,정보,롱숏 비율,스켈핑"/>
+<meta itemprop="image" content="https://coinfarm.online/logo.png"/>
+<meta name="thumbnail" content="https://coinfarm.online/logo.png"/>
+
+<meta name="ROBOTS" content="ALL,INDEX,FOLLOW"/>
+<meta name="yandex-verification" content="67f87d8c393753f3" />
+
+
+<link rel="shortcut icon" href="/coinfarm.ico">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72207035-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-72207035-2');
+</script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+ <script  src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="/public/js/jquery.animateNumber.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="/public/procBar.css?344">
+
+<script src="/public/js/cc.js"></script>
+<script src="/public/js/util.js"></script>
+
+
+	<style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+
+body{
+
+	font-family:'Arial';
+}
+
+
+.btn_act {
+	font-size:0.8rem;width:120px;height:100%;border:1px solid #000;background:linear-gradient( to bottom, #efefef, #999 );color:#000;
+}
+
+
+
+.btn_chart {
+
+	font-size:0.8rem;height:30px;border:1px solid #22638d;background:#253440;color:#22638d;width:80px;
+}
+
+.btn_chart2 {
+
+	font-size:0.8rem;height:30px;border:1px solid #22638d;background:#22638d;color:#eee;width:80px;
+}
+
+.btn_form {
+
+	font-size:0.9rem;height:50px;border:1px solid #0b3753;background:#22638d;color:#eee;padding-left:10px;padding-right:10px;cursor:pointer;border-radius:5px;width:100px;
+}
+
+.btn_form:hover {
+
+	background:#eee;color:#22638d;
+}
+
+.btn_form_reg {
+
+	font-size:1rem;height:50px;border:1px solid #0b3753;background:#22638d;color:#eee;padding-left:10px;padding-right:10px;cursor:pointer;border-radius:5px;
+}
+
+.btn_form_reg:hover {
+
+	background:#eee;color:#22638d;
+}
+
+
+	    .css_reg {
+
+	font-size:1rem;height:50px;border:1px solid #22638d;background:#253440;color:#eee;width:95%;padding-left:10px;
+
+	    }
+
+
+.btn_main_menu {
+
+	font-size:0.9rem;height:40px;border:1px solid #202d37;background:#253440;color:#eee;width:120px;cursor:pointer;
+}
+.btn_main_menu:hover {
+
+	border:1px solid #202d37;background:#22638d;color:#eee;
+}
+.btn_main_menu_off {
+
+	font-size:0.9rem;height:40px;border:1px solid #202d37;background:#253440;color:#999;width:120px;
+}
+.btn_main_menu2 {
+
+	font-size:0.9rem;height:40px;border:1px solid #202d37;background:#22638d;color:#eee;width:120px;
+}
+
+.btn_sub {
+
+	font-size:0.9rem;height:40px;border:1px solid #aaa;background:#253440;color:#eee;width:120px;cursor:pointer;
+}
+.btn_sub:hover {
+
+	border:1px solid #202d37;background:#22638d;color:#eee;
+}
+
+
+.t1{
+	border-right:1px solid #000;
+}
+.t2{
+	border-right:1px solid #000
+	;padding-right:5px;text-align:right;
+}
+.c1{
+
+color:#ff0000;border-right:1px solid #000;padding-right:5px;text-align:right;
+}
+.c2{
+
+ color:#009619;border-right:1px solid #000;padding-right:5px;text-align:right;
+}
+
+.c3{
+
+color:#000000;border-right:1px solid #000;padding-right:5px;text-align:right;
+}
+@import url(https://fonts.googleapis.com/css?family=Oxygen+Mono);
+/* Starter CSS for Menu */
+#cssmenu {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+}
+#cssmenu ul,
+#cssmenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu ul {
+  position: relative;
+  z-index: 597;
+}
+#cssmenu ul li {
+  float: left;
+  min-height: 1px;
+  vertical-align: middle;
+}
+#cssmenu ul li.hover,
+#cssmenu ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+  width: 100%;
+}
+#cssmenu ul ul li {
+  float: none;
+}
+#cssmenu ul ul ul {
+  top: 0;
+  left: 200px;
+  width: 200px;
+}
+#cssmenu ul li:hover > ul {
+  visibility: visible;
+}
+#cssmenu ul ul {
+  bottom: 0;
+  left: 0;
+}
+#cssmenu ul ul {
+  margin-top: 0;
+}
+#cssmenu ul ul li {
+  font-weight: normal;
+}
+#cssmenu a {
+  display: block;
+  line-height: 1em;
+  text-decoration: none;
+}
+/* Custom CSS Styles */
+#cssmenu {
+ /* background: #333;*/
+  border-bottom: 5px solid #1b9bff;
+  font-family: 'Oxygen Mono', Tahoma, Arial, sans-serif;
+
+}
+#cssmenu > ul {
+  *display: inline-block;
+}
+#cssmenu:after,
+#cssmenu ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#cssmenu ul {
+  /*text-transform: uppercase;*/
+
+}
+#cssmenu ul ul {
+  border-top: 4px solid #1b9bff;
+  text-transform: none;
+  min-width: 200px;
+}
+#cssmenu ul ul a {
+  background: #1b9bff;
+  color: #ffffff;
+  border: 1px solid #0082e7;
+
+  border-top: 0 none;
+  line-height: 150%;
+  padding: 16px 16px;
+  font-size: 0.8rem;
+}
+#cssmenu ul ul ul {
+  border-top: 0 none;
+}
+#cssmenu ul ul li {
+  position: relative;
+}
+#cssmenu ul ul li:first-child > a {
+  border-top: 1px solid #0082e7;
+}
+#cssmenu ul ul li:hover > a {
+  background: #4eb1ff;
+  color: #ffffff;
+}
+#cssmenu ul ul li:last-child > a {
+  -moz-border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -moz-box-shadow: 0 1px 0 #1b9bff;
+  -webkit-box-shadow: 0 1px 0 #1b9bff;
+  box-shadow: 0 1px 0 #1b9bff;
+}
+#cssmenu ul ul li:last-child:hover > a {
+  -moz-border-radius: 0 0 0 3px;
+  -webkit-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#cssmenu ul ul li.has-sub > a:after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -8px;
+}
+#cssmenu ul li:hover > a,
+#cssmenu ul li.active > a {
+  background: #1b9bff;
+  border-radius:5px 5px 0 0px;
+  color: #ffffff;
+}
+#cssmenu ul li.has-sub > a:after {
+  content: '+';
+  margin-left: 5px;
+}
+#cssmenu ul li.last ul {
+  left: auto;
+  right: 0;
+}
+#cssmenu ul li.last ul ul {
+  left: auto;
+  right: 99.5%;
+}
+#cssmenu a {
+
+  color: #fff;
+  font-size:1.2rem;
+
+  padding: 0 25px;
+}
+#cssmenu > ul > li > a {
+  line-height: 48px;
+  font-size: 0.9rem;
+}
+#cssmenu.align-center > ul {
+  text-align: center;
+  font-size: 0;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu.align-right ul ul {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+#cssmenu.align-right ul ul ul {
+  left: auto;
+  right: 200px;
+}
+#cssmenu.align-right ul ul li.has-sub > a:after {
+  left: 15px;
+  right: auto;
+}
+
+</style>
+
+
+
+
+<script language="javascript">
+
+    var am = 0;
+
+    var chart = 2;
+
+
+
+    function fn_show_count(cnt) {
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+        $('#lines').animateNumber({ number: cnt, numberStep: comma_separator_number_step }, 10000);
+    }
+
+
+
+
+    function fn_btc() {
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: "/public/api/ajax_mex_btc.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+            $('#vm_btc').html(response);
+
+
+        }
+
+        });
+
+
+    }
+
+
+    function fn_btc_mex() {
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: "/public/api/ajax_mex_btc_en.asp"
+        , dataType: "json"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+
+            var user_cnt = response.users;
+
+
+            var comma_cnt = $.animateNumber.numberStepFactories.separator(',');
+            $('#vm_user').animateNumber({ number: user_cnt, numberStep: comma_cnt }, 3000);
+
+            document.title = 'Coinfarm Margin Bitmex xbt usd';
+
+
+        }
+
+        });
+
+
+    }
+
+
+
+    var ou_tx = '';
+
+    function fn_ou5() {
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: "ajax_mex_trade_ou.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+            if (ou_tx != response) {
+                $('#vm_ou5').html(response);
+            }
+            /*
+                    if ( ou_tx != response && ou_tx != '' ) {
+            
+                    if ( c_menu1 == 1 ){
+                        fn_ff_auto();
+                    }
+                         }
+            */
+            ou_tx = response;
+
+        }
+
+        });
+
+
+    }
+
+
+
+
+    var signal = 0;
+
+
+
+    function fn_trade_tx() {
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: "/public/api/mex_trade_usd.asp"
+        , dataType: "json"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+
+            var tot = 0;
+	    var b = 0;
+	    var s = 0;
+		var av1 = 0;
+		var av2 = 0;
+
+	    b = response.b5;
+	    s = response.s5;
+
+            $('#quote_short21').html(numberWithCommas(s));
+
+            $('#quote_long21').html(numberWithCommas(b));
+
+
+
+            tot = parseFloat(s) + parseFloat(b);
+
+            av1 = 100 - parseFloat(s / tot * 100).toFixed(2);
+            av2 = parseFloat(b / tot * 100).toFixed(2);
+
+            $('#quote_short22').html(parseFloat(s / tot * 100).toFixed(1) + ' %')
+            $('#quote_long22').html(parseFloat(av2).toFixed(1) + ' %')
+
+
+
+            var box = $('#bar_21');
+
+            box.animate({ width: av1 + '%' }, 2000);
+
+
+            var box2 = $('#bar_22');
+
+            box2.animate({ width: av2 + '%' }, 2000);
+
+
+		///
+
+
+	    b = response.b10;
+	    s = response.s10;
+
+            $('#quote_short51').html(numberWithCommas(s));
+
+            $('#quote_long51').html(numberWithCommas(b));
+
+
+
+            tot = parseFloat(s) + parseFloat(b);
+
+            av1 = 100 - parseFloat(s / tot * 100).toFixed(2);
+            av2 = parseFloat(b / tot * 100).toFixed(2);
+
+            $('#quote_short52').html(parseFloat(s / tot * 100).toFixed(1) + ' %')
+            $('#quote_long52').html(parseFloat(av2).toFixed(1) + ' %')
+
+
+
+            box = $('#bar_51');
+
+            box.animate({ width: av1 + '%' }, 2000);
+
+
+            box2 = $('#bar_52');
+
+            box2.animate({ width: av2 + '%' }, 2000);
+
+
+		/////////////////////////////////
+
+
+	    b = response.b30;
+	    s = response.s30;
+
+            $('#quote_short31').html(numberWithCommas(s));
+
+            $('#quote_long31').html(numberWithCommas(b));
+
+
+
+            tot = parseFloat(s) + parseFloat(b);
+
+            av1 = 100 - parseFloat(s / tot * 100).toFixed(2);
+            av2 = parseFloat(b / tot * 100).toFixed(2);
+
+
+            $('#quote_short32').html(parseFloat(s / tot * 100).toFixed(1) + ' %')
+            $('#quote_long32').html(parseFloat(av2).toFixed(1) + ' %')
+
+            box = $('#bar_31');
+
+            box.animate({ width: av1 + '%' }, 2000);
+
+
+            box2 = $('#bar_32');
+
+            box2.animate({ width: av2 + '%' }, 2000);
+
+
+		/////////////////////////////////
+
+
+
+	    b = response.b60;
+	    s = response.s60;
+
+            $('#quote_short41').html(numberWithCommas(s));
+
+            $('#quote_long41').html(numberWithCommas(b));
+
+
+
+            tot = parseFloat(s) + parseFloat(b);
+
+            av1 = 100 - parseFloat(s / tot * 100).toFixed(2);
+            av2 = parseFloat(b / tot * 100).toFixed(2);
+
+
+            $('#quote_short42').html(parseFloat(s / tot * 100).toFixed(1) + ' %')
+            $('#quote_long42').html(parseFloat(av2).toFixed(1) + ' %')
+
+            box = $('#bar_41');
+
+            box.animate({ width: av1 + '%' }, 2000);
+
+
+            box2 = $('#bar_42');
+
+            box2.animate({ width: av2 + '%' }, 2000);
+
+
+		/////////////////////////////////
+
+
+
+	    b = response.b120;
+	    s = response.s120;
+
+            $('#quote_short61').html(numberWithCommas(s));
+
+            $('#quote_long61').html(numberWithCommas(b));
+
+
+
+            tot = parseFloat(s) + parseFloat(b);
+
+            av1 = 100 - parseFloat(s / tot * 100).toFixed(2);
+            av2 = parseFloat(b / tot * 100).toFixed(2);
+
+     
+            $('#quote_short62').html(parseFloat(s / tot * 100).toFixed(1) + ' %')
+            $('#quote_long62').html(parseFloat(av2).toFixed(1) + ' %')
+
+
+            box = $('#bar_61');
+
+            box.animate({ width: av1 + '%' }, 2000);
+
+
+            box2 = $('#bar_62');
+
+            box2.animate({ width: av2 + '%' }, 2000);
+
+
+		/////////////////////////////////
+
+
+
+
+	    b = response.b240;
+	    s = response.s240;
+
+            $('#quote_short71').html(numberWithCommas(s));
+
+            $('#quote_long71').html(numberWithCommas(b));
+
+
+
+            tot = parseFloat(s) + parseFloat(b);
+
+            av1 = 100 - parseFloat(s / tot * 100).toFixed(2);
+            av2 = parseFloat(b / tot * 100).toFixed(2);
+
+  
+            $('#quote_short72').html(parseFloat(s / tot * 100).toFixed(1) + ' %')
+            $('#quote_long72').html(parseFloat(av2).toFixed(1) + ' %')
+
+
+            box = $('#bar_71');
+
+            box.animate({ width: av1 + '%' }, 2000);
+
+
+            box2 = $('#bar_72');
+
+            box2.animate({ width: av2 + '%' }, 2000);
+
+
+		/////////////////////////////////
+
+
+	    b = response.b720;
+	    s = response.s720;
+
+            $('#quote_short81').html(numberWithCommas(s));
+
+            $('#quote_long81').html(numberWithCommas(b));
+
+
+
+            tot = parseFloat(s) + parseFloat(b);
+
+            av1 = 100 - parseFloat(s / tot * 100).toFixed(2);
+            av2 = parseFloat(b / tot * 100).toFixed(2);
+
+
+            $('#quote_short82').html(parseFloat(s / tot * 100).toFixed(1) + ' %')
+            $('#quote_long82').html(parseFloat(av2).toFixed(1) + ' %')
+
+
+            box = $('#bar_81');
+
+            box.animate({ width: av1 + '%' }, 2000);
+
+
+            box2 = $('#bar_82');
+
+            box2.animate({ width: av2 + '%' }, 2000);
+
+
+		/////////////////////////////////
+
+
+        }
+        });
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+    function fn_trade_tot() {
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: "/public/api/ajax_mex_trade_tot.asp"
+        , dataType: "json"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+
+
+            //		$('#tot_short').html(numberWithCommas(response.short) );
+
+            fn_show_number('#tot_short', response.short);
+            fn_show_number('#tot_long', response.long);
+
+
+            //		$('#tot_long').html(numberWithCommas(response.long) );
+
+
+            var tot = 0;
+            tot = parseFloat(response.short) + parseFloat(response.long);
+
+            var aa = parseFloat(response.short / tot * 100);
+            var bb = parseFloat(100 - aa);
+
+            $('#tot_short2').html(aa.toFixed(2) + ' %')
+            $('#tot_long2').html(bb.toFixed(2) + ' %')
+
+            var tot_sum = 0;
+
+            tot = parseFloat(response.long) - parseFloat(response.short);
+
+            //$('#tot_usd').html(numberWithCommas(tot) );
+            if (tot < 0) {
+                $('#tot_usd_title').html('<span style="color:#c44d2d">SHORTS</span> ');
+                tot = tot * -1;
+            } else {
+
+                $('#tot_usd_title').html('<span style="color:#2196f3">LONGS</span> ');
+            }
+
+            fn_show(parseInt(tot));
+
+
+        }
+        });
+
+
+    }
+
+    function fn_show(cnt) {
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+        $('#tot_usd').animateNumber({ number: cnt, numberStep: comma_separator_number_step }, 10000);
+    }
+
+    function fn_show_number(target, cnt) {
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+        $(target).animateNumber({ number: cnt, numberStep: comma_separator_number_step }, 10000);
+    }
+
+
+
+    function fn_sc() {
+
+        var id = $('#sc_id').val();
+        if (id == '') {
+            alert('Please input id');
+
+        }
+        if (id.length <= 2) {
+            alert('Please input id');
+
+        }
+        $('#sc_long').html("");
+        $('#sc_short').html("");
+        fn_long_sc(id);
+        fn_short_sc(id);
+    }
+
+
+
+
+
+    function fn_g1() {
+
+
+
+        window.open('/gsn/g1.asp?tcs=5m', 'g1');
+
+    }
+
+
+    function fn_vm1() {
+
+
+    }
+
+
+
+    function fn_g2() {
+
+        window.open('/gsn/g2.asp?tcs=5m', 'g2');
+
+    }
+
+    function fn_g3() {
+
+        window.open('/gsn/g3.asp?tcs=5m', 'g3');
+
+
+    }
+    function fn_g4() {
+
+        window.open('/gsn/g4.asp?tcs=5m', 'g4');
+
+    }
+
+
+
+    var hc = 0;
+    var hq = 0;
+
+    function fn_hc_loop() {
+        hc++;
+
+        hq++;
+
+        if (hc == 10) {
+            fn_g1()
+
+        } else if (hc == 20) {
+            fn_g2()
+
+        } else if (hc == 30) {
+            fn_g3()
+        } else if (hc == 40) {
+            fn_g4()
+        }
+
+        if (hc == 15 || hc == 35) {
+
+            if ($('#auto_r').is(":checked")) {
+
+
+
+                // fn_gr_min();
+
+
+
+
+
+            }
+        }
+
+
+        if (hc >= 40) {
+            hc = 0;
+        }
+
+
+        if (hq == 60) {
+
+        }
+
+        if (hq == 65) {
+
+
+        }
+        if (hq >= 65) {
+            hq = 0;
+        }
+
+
+
+
+
+    }
+
+    function fn_am() {
+        am = $('#sc_am').val();
+        fn_long();
+        fn_short();
+    }
+
+    function fn_tcs() {
+        var tcs = $('#sc_tcs').val();
+        window.open('?tcs=' + tcs, '_self');
+
+    }
+
+
+    var tot_l1 = 0;
+    var tot_s1 = 0;
+
+    function fn_tot_long(am) {
+
+        tot_l1 = am;
+
+        $('#t_long').html(' ' + numberWithCommas(am) + ' USD');
+
+        var cx = tot_l1 + (tot_s1);
+        var pl = am / cx * 100;
+        $('#t_long2').html(pl.toFixed(2) + ' %');
+
+
+
+        var ps2 = tot_s1 / cx * 100;
+
+        $('#t_short2').html(ps2.toFixed(2) + ' %');
+    }
+
+
+    function fn_tot_short(am) {
+
+        tot_s1 = (am * -1);
+
+        $('#t_short').html(' ' + numberWithCommas(am) + ' USD');
+
+        var cx = tot_l1 + (tot_s1);
+
+        var pl2 = tot_l1 / cx * 100;
+        $('#t_long2').html(pl2.toFixed(2) + ' %');
+
+
+        var ps2 = tot_s1 / cx * 100;
+        $('#t_short2').html(ps2.toFixed(2) + ' %');
+
+
+    }
+
+    function numberWithCommas(n) {
+        var parts = n.toString().split(".");
+        return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
+    }
+
+
+    function fn_jump(lang) {
+
+        if (lang == 1) {
+            window.open('index_kr.asp', '_self');
+        } else if (lang == 2) {
+            window.open('index.asp', '_self');
+        } else if (lang == 3) {
+            window.open('index_ru.asp', '_self');
+        } else {
+            window.open('/', '_self');
+
+        }
+    }
+
+
+    var c_menu1 = 0;
+
+    function fn_ff() {
+
+        if (c_menu1 == 0) {
+            $('#vm_pt').html("<iframe name='pt_total' id='pt_total' src='/fa/do_ou_5.asp'  width='100%' height='100%' style='-webkit-overflow-scrolling:touch;overflow-x:scroll;width:100%;height:100%'   scrolling='auto'  frameborder='0'  marginwidth='0' marginheight='0'  ></iframe>");
+            c_menu1 = 1;
+            $('#btn_pt').val(' Pattern Close ');
+            $('#btn_pt1').show();
+
+        } else {
+            $('#vm_pt').html("");
+            c_menu1 = 0;
+            $('#btn_pt').val(' 최근12시간 패턴보기 ');
+            $('#btn_pt1').hide();
+        }
+
+    }
+
+
+    function fn_ff_auto() {
+
+        if (c_menu1 == 1) {
+            $('#vm_pt').html("<iframe name='pt_total' id='pt_total' width='100%' height='100%' style='-webkit-overflow-scrolling:touch;overflow-x: scroll;'   scrolling='auto'  frameborder='0'  marginwidth='0' marginheight='0' src='/fa/do_ou_5.asp'  ></iframe>");
+
+
+        }
+    }
+
+
+    function fn_size_pt2(x) {
+        $("#pt_total").height(x + 20);
+
+
+        var myIframe = document.getElementById('pt_total');
+
+        myIframe.contentWindow.scrollTo(15000, 0);
+
+    }
+
+
+    function fn_gr() {
+
+        window.open('/ws/gr_01.asp', 'pt_trade');
+
+
+        $("#btn_pt2").attr('class', 'btn_chart2');
+        $("#btn_pt3").attr('class', 'btn_chart');
+        $("#btn_pt4").attr('class', 'btn_chart');
+        chart = 2;
+    }
+
+
+    function fn_gr_day(dd) {
+
+        window.open('/ws/gr_01.asp?days=' + dd, 'pt_trade');
+        if (dd == 1) {
+            chart = 3;
+
+            $("#btn_pt2").attr('class', 'btn_chart');
+            $("#btn_pt3").attr('class', 'btn_chart2');
+            $("#btn_pt4").attr('class', 'btn_chart');
+        } else {
+            chart = 4;
+
+            $("#btn_pt2").attr('class', 'btn_chart');
+            $("#btn_pt3").attr('class', 'btn_chart');
+            $("#btn_pt4").attr('class', 'btn_chart2');
+
+        }
+
+    }
+    function fn_gr_min() {
+
+        window.open('/ws/gr_011.asp', 'pt_trade');
+        chart = 1;
+
+        $("#btn_pt2").attr('class', 'btn_chart');
+        $("#btn_pt3").attr('class', 'btn_chart');
+        $("#btn_pt4").attr('class', 'btn_chart');
+
+    }
+
+
+
+</script>
+
+
+</head>
+
+
+
+
+<body style="font-family:Arial;font-size:0.9rem;background:#333;">
+    <center>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#1d6c9e;" >
+    <tr>
+            <td style="background:url('/public/bg_0.png') no-repeat ;padding-top:10px;" align="center">
+
+
+
+                <table width="1440" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+
+                <tr>
+                    <td colspan="2" height="50" align="center" style="color:#fff;font-size:2rem;">
+
+	                			<table width="100%" border="0" cellpadding="0" cellspacing="0" style="">
+			<tr>
+
+				<td width="15%" align="" style="color:#fff;padding-left:4px;">
+                   
+					<img src='/public/logo.png?3' style='vertical-align:middle' width="200">
+				 
+				</td>
+
+				<td width="4%" align="" style="color:#fff;padding-left:10px;">
+
+					<img src='/img/online.png?1' style='vertical-align:middle' width="44">
+				</td>
+				<td width="4%" align="" style="color:#fff;padding-left:10px;">
+
+					<span id="vm_user" style="color:#fff;font-size:1.2rem;">0</span>
+				</td>
+			
+					
+		
+				<td width="51%" align="center" style="color:#4fff08;padding-left:10px;font-size:0.9rem;text-decoration:none">		
+						
+				</td>				
+
+
+
+				<td width="20%"  align="right" style="color:#fff;padding-right:10px;">
+					<img src='/n1.png?' onclick='fn_lang(1);' title='English' style='cursor:pointer;' >
+					<img src='/n4.png' onclick='fn_lang(4);' title='Korean' style='cursor:pointer;' >
+
+					<img src='/n5.png' onclick='fn_lang(5);'  title='Japanese' style='cursor:pointer;' >
+				</td>
+			</tr>
+			</table>
+
+<script>
+function fn_lang(lng){
+	if (lng == 1 ){
+		window.open('//coinfarm.online/','_self');
+	}
+
+	if (lng == 2 ){
+		window.open('/index_ch.asp','_self');
+	}
+	if (lng == 3 ){
+		window.open('/index_ru.asp','_self');
+	}
+	if (lng == 4 ){
+		window.open('//kr.coinfarm.online/','_self');
+	}
+	if (lng == 5 ){
+		window.open('//jp.coinfarm.online/','_self');
+	}
+}
+
+
+</script>
+
+	                </td>
+                </tr>
+
+
+
+                <tr>
+	                <td colspan="2" >
+
+         
+
+		                
+
+
+<div id="cssmenu">
+  <ul>
+     <li class="active has-sub" ><a href="/" target="_top"><i class="far fa-chart-bar"></i> Margin Analysis </a>
+        <ul>
+           <li><a href="/"><i class="far fa-chart-bar"></i> BitMex XBT USD</a></li>
+           <li><a href="/bitmex/xbtbtc.asp"><i class="far fa-chart-bar"></i> BitMex XBT BTC</a></li>
+           <li><a href="/bitfinex/"><i class="far fa-chart-bar"></i> BItFinex BTC USDT</a></li>
+            <li><a href="/bitflyer/"><i class="far fa-chart-bar"></i> Bitflyer BTC JPY</a></li>
+            <li ><a href="/rank/funding.asp"><i class="far fa-chart-bar"></i> BitMex Funding XBT</a></li>
+	    <li><a href="/eth/"><i class="far fa-chart-bar"></i> BitMex ETH USD</a></li>
+
+
+        </ul>
+     </li>
+     <li  ><a href="/position/position_realtime.asp"><i class="fa fa-fw fa-street-view"></i> Margin Position</a>
+        <ul>
+           <li><a href="/position/position_realtime.asp"><img src="/img/logo_bmex.png"  style='vertical-align:top' height="16"  >  Open Position XBT</a></li>
+           <li><a href="/position/"><img src="/img/logo_bmex.png"  style='vertical-align:top' height="16"  >  Open position search</a></li>
+           <li><a href="/position/position_trade.asp"><img src="/img/logo_bmex.png"  style='vertical-align:top' height="16"  > trade position XBT</a></li>
+           <li><a href="/position_eth/"><img src="/img/logo_bmex.png"  style='vertical-align:top' height="16"  >  Open position ETH </a></li>
+        </ul>
+     </li>
+     <li  ><a href="/rank/"><i class="fas fa-user"></i> Leader Board</a>
+        <ul>
+           <li><a href="/rank/"><img src="/img/logo_bmex.png"  style='vertical-align:top' height="16"  >  BitMex</a></li>
+           
+           
+        </ul>
+     </li>
+     
+
+     <li ><a href="/sound/"><i class="fas fa-volume-up"></i> Sound Farm</a></li>
+      <li ><a href="/api/"><i class="fas fa-fighter-jet"></i> API Farm</a></li>
+      <li ><a href="/signal/"><i class="fas fa-signature"></i> Signal Farm</a></li>
+
+
+      
+  </ul>
+</div>
+
+
+	                </td>
+                </tr>    
+                </table>
+
+            </td>
+        </tr>
+</table>
+
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#253440;" >
+    <tr>
+            <td style="padding-top:10px;padding-bottom:10px;" align="center">
+
+
+                <table width="1440" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+
+                <tr>
+	                <td height="40" align="center" style="color:#fff;background:#253440;" width="100%">
+
+		                
+<script src="/public/chart/amcharts.js"></script>
+<script src="/public/chart/amcharts/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+<script language="javascript">
+
+    var chart_am = AmCharts.makeChart("chartdiv", {
+    "theme": "dark",
+    "type": "serial",
+    "dataProvider": [{
+        "country": "",
+        "short": 0,
+        "long": 0
+
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+
+
+    }, {
+        "country": "",
+        "short": 0,
+        "long": 0
+    }],
+    "valueAxes": [{
+        "stackType": "3d",
+        "unit": "$",
+        "position": "left",
+        "title": "",
+       "labelsEnabled": false
+    }],
+
+    "startDuration": 1,
+    "graphs": [{
+        "balloonText": "XBT Short in 1 min <br>[[category]]  $ <b>[[value]]</b>",
+        "fillAlphas": 0.5,
+        "lineAlpha": 0.2,
+        "title": "Short",
+        "type": "column",
+        "valueField": "short"
+    }, {
+        "balloonText": "XBT Long in 1 min <br>[[category]]  $ <b>[[value]]</b>",
+        "fillAlphas": 0.9,
+        "lineAlpha": 0.2,
+        "title": "Long",
+        "type": "column",
+        "valueField": "long"
+    }],
+    "plotAreaFillAlphas": 0.1,
+    "depth3D": 50,
+    "angle": 20,
+    "categoryField": "country",
+    "categoryAxis": {
+        "gridPosition": "start",
+        "labelsEnabled": false
+    }
+});
+
+    var signal = 0;
+
+    
+    function fn_json_sec() {
+
+
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: "/public/ws/sec_data.asp"
+        , dataType: "json"
+        , timeout: 3000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+            var xbt_now = 0;
+
+            xbt = response.xbt;
+            
+
+
+            chart_am.dataProvider.shift();
+
+
+            var d = new Date();
+            var curr_hour = d.getHours();
+            var curr_min = d.getMinutes();
+            var curr_sec = d.getSeconds();
+            if ( curr_hour <= 9 ) {
+                curr_hour = "0" + curr_hour;
+            }
+            if ( curr_min <= 9 ) {
+                curr_min = "0" + curr_min;
+            }
+            if ( curr_sec <= 9 ) {
+                curr_sec = "0" + curr_sec;
+            }
+
+            chart_am.dataProvider.push( {
+              "country": curr_hour + ":" + curr_min + ":" + curr_sec,
+              "short": response.short,
+              "long": response.long,
+            } );
+    
+            var s = 0;
+            var b = 0;
+            var signal_level = '0';
+            var signal_level2 = '0';
+
+
+            s = parseInt(response.short);
+            b = parseInt(response.long);
+
+            if ( parseInt(response.short) > parseInt(response.long) ){
+                signal_level2 = signal_level;
+
+                if ( s - b >= 1000000) {
+                    signal_level = '2';
+                }else if ( s - b >= 500000) {
+                    signal_level = '1';
+                }else{
+                    signal_level = '0';
+                }
+
+  
+                signal = 2;
+                $('#signal_xbt_txt').html('BitMex in 1 min trade <font color="#317aff">Long $ ' +numberWithCommas(b) + '</font>  <font color="#ff4628">Short $ ' +numberWithCommas(s) + '</font> Superiority <font color="#ff4628">매도 $ ' + numberWithCommas(s-b) + ' </font> ');
+                
+            }else if ( parseInt(response.short) < parseInt(response.long) ){
+                signal_level2 = signal_level;
+                if ( b - s >= 1000000) {
+                    signal_level = '2';
+                }else if ( b - s >= 500000) {
+                    signal_level = '1';
+                }else{
+                    signal_level = '0';
+                }
+
+            
+             
+                signal = 1;
+                $('#signal_xbt_txt').html('BitMex in 1 min trade <font color="#317aff">Short $ ' +numberWithCommas(b) + '</font>  <font color="#ff4628">Short $ ' +numberWithCommas(s) + '</font> Superiority <font color="#317aff">매수 $ ' + numberWithCommas(b-s) + ' </font>');
+            }else{
+          
+                signal = 0;
+                $('#signal_xbt_txt').html('BitMex in 1 min trade <font color="#317aff">Long $ ' +numberWithCommas(b) + '</font>  <font color="#ff4628">Long $ ' +numberWithCommas(s) + '</font>');
+                
+            }
+           
+            chart_am.validateData();
+
+	         $('#signal_xbt_now').html('XBT <font color="#2ee415">$ '+ xbt + '</font> ');
+
+        }
+        });
+
+
+    }
+
+
+
+        var timer000 = setInterval('fn_json_sec()', 1000);
+
+</script>
+
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+
+	<tr>
+		<td height="100" style="color:#aaa;padding:5px;" align="center" width="100%">
+            <div id="signal" style="position:absolute;z-index:2;padding-top:7px;padding-left:3px;"></div>
+            <div id="signal_xbt" style="position:absolute;z-index:3;padding-top:2px;text-align:center;width:1440px">
+                   <span id="signal_xbt_txt" style="color:#fff;"></span>
+            </div>
+            <div id="signal_xbt2" style="position:absolute;z-index:4;padding-top:2px;padding-left:93px;">
+                   <span id="signal_xbt_now" style="color:#fff;"></span>
+            </div>
+            <div id="chartdiv" style="width:100%;height:100px"></div>	
+		</td>
+	<tr>
+
+</table>
+
+
+
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+
+	<tr>
+		<td height="40" style="background:#253440;color:#aaa;" align="center">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+                <tr>
+                    <td width="350" height="80" style="background:#000;color:#555;font-size:0.8rem;text-align:center;">
+                        <div id="t-1">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:350px;height:80px"
+     data-ad-client="ca-pub-5557727889598339"
+     data-ad-slot="9710077482"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+                        </div>
+                    </td>
+                    <td width="10"      style="background:#222;"></td>
+                    <td width="350"     style="background:#000;color:#555;font-size:0.8rem;text-align:center;">
+
+                        <div id="t-2">AD Space T-2 ( 350 X 80 )</div>
+                    </td>
+                    <td width="10"      style="background:#222;"></td>
+                    <td width="350"     style="background:#000;color:#555;font-size:0.8rem;text-align:center;cursor:pointer;">
+                        <div id="t-3">AD Space T-3 ( 350 X 80 )</div>
+                    </td>
+                    <td width="10"      style="background:#222;"></td>
+                    <td width="350"     style="background:#000;color:#555;font-size:0.8rem;text-align:center;cursor:pointer;">
+                        <div id="t-4">AD Space T-4 ( 350 X 80 )</div>
+                    </td>
+                </tr>
+                </table>
+
+		</td>
+	<tr>
+
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;padding-top:10px" >
+
+	<tr>
+		<td height="40" style="background:#2d3b47;color:#aaa;" align="center">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+                <tr>
+                    <td height="40" style="color:#dedede;text-align:center;background:#1d6c9e;" width="50%"><i class="fas fa-tv"></i>  BJ Africa TV & <img src='/public/youtube.png' width='26' style='vertical-align:middle'> Youtube</td>
+                   
+                </tr>
+                <tr>
+                    <td  height="100" style="font-size:0.8rem;text-align:center;border:1px solid #1d6c9e;padding:5px;background:#202d37;">
+
+                        <script>
+
+    function fn_tv_open(url){
+
+        window.open(url,'_new');
+
+
+    }
+
+
+</script>
+<center>
+
+                        <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;">
+                            <tr>
+                                <td style="padding:5px;">
+                                    <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+
+                                        <tr>
+                                            <td height="80"><img src="/public/bj/bj1.png"  onclick="fn_tv_open('http://play.afreecatv.com/jupsjups');"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="color:#fff;">솔트강</td>
+                                        </tr>
+                        
+                                    </table>
+                                </td>
+
+                                <td width="20"></td>
+                                <td style="padding:5px;">
+                                    <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;">
+
+                                        <tr>
+                                            <td height="80"><img src="/public/bj/bj3.png?"  onclick="fn_tv_open('https://www.youtube.com/user/cocoa898');"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="color:#fff;">강은호</td>
+                                        </tr>
+                        
+                                    </table>
+                                </td>
+                                <td width="20"></td>
+                                <td style="padding:5px;">
+                                    <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;">
+
+                                        <tr>
+                                            <td height="80"><img src="/public/bj/bj4.png"  onclick="fn_tv_open('http://play.afreecatv.com/chrhtn');"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="color:#fff;">빡유</td>
+                                        </tr>
+                        
+                                    </table>
+                                </td>
+                                <td width="20"></td>
+                                <td style="padding:5px;">
+                                    <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;">
+
+                                        <tr>
+                                            <td height="80"><img src="/public/bj/bj2.png"  onclick="fn_tv_open('http://play.afreecatv.com/yama10000');"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="color:#fff;">하농꺼봉봉</td>
+                                        </tr>
+                        
+                                    </table>
+                                </td>
+                                <td width="20"></td>
+
+
+
+                                <td style="padding:5px;">
+                                    <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;">
+
+                                        <tr>
+                                            <td height="80"><img src="/public/bj/bj201.png"  onclick="fn_tv_open('http://play.afreecatv.com/pooh3704');"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="color:#fff;">반소연</td>
+                                        </tr>
+                        
+                                    </table>
+                                </td>
+                                <td width="20"></td>
+                                <td style="padding:5px;">
+                                    <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;">
+
+                                        <tr>
+                                            <td height="80"><img src="/public/bj/bj202.png?1"  onclick="fn_tv_open('http://play.afreecatv.com/thelovelove');"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="color:#fff;">쪼고래</td>
+                                        </tr>
+                        
+                                    </table>
+                                </td>
+                                <td width="20"></td>
+
+
+                                <td style="padding:5px;">
+                                    <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;">
+
+                                        <tr>
+                                            <td height="80"><img src="/public/bj/bj203.png?"  onclick="fn_tv_open('http://play.afreecatv.com/creo7077');"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="color:#fff;">보니</td>
+                                        </tr>
+                        
+                                    </table>
+                                </td>
+                                <td width="20"></td>
+
+
+                                <td style="padding:5px;">
+                                    <table  border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;">
+
+                                        <tr>
+                                            <td height="80"><img src="/public/bj/bj5.png?"  onclick="fn_tv_open('http://play.afreecatv.com/tvtz91');"  /></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="color:#fff;">은사님</td>
+                                        </tr>
+                        
+                                    </table>
+                                </td>
+                            </tr>
+                            </table>
+
+</center>
+
+
+
+                    </td>
+          
+                   
+                </tr>
+                </table>
+
+		</td>
+	<tr>
+
+</table>
+
+<script type="text/javascript">
+
+
+
+    var notice_nn ='';
+
+    function fn_tv_open(url){
+
+        window.open(url,'_new');
+        //$('#tv_show').show();
+
+    }
+
+
+function fn_ad_t1() {
+
+    $.ajax({
+        type: "POST"
+    , async: true
+    , url: "/ad/ad1.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response) {
+
+            $('#t-1').html(response);
+
+
+        }
+
+});
+
+
+}
+
+
+function fn_ad_t2() {
+
+    $.ajax({
+        type: "POST"
+    , async: true
+    , url: "/ad/ad2.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response) {
+
+            $('#t-2').html(response);
+
+
+        }
+
+});
+
+
+}
+
+
+
+function fn_ad_t3() {
+
+    $.ajax({
+        type: "POST"
+    , async: true
+    , url: "/ad/ad3.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response) {
+
+            $('#t-3').html(response);
+
+
+        }
+
+});
+
+
+}
+
+function fn_ad_t4() {
+
+    $.ajax({
+        type: "POST"
+    , async: true
+    , url: "/ad/ad4.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response) {
+
+            $('#t-4').html(response);
+
+
+        }
+
+});
+
+
+}
+
+
+
+
+</script>
+
+
+	                </td>
+                </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#1d6c9e;" >
+    <tr>
+            <td style="background:url('/public/bg_1.png') no-repeat ;" align="center">
+
+
+        
+
+
+
+<table width="1440" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+<tr>
+    <td colspan="2" height="40" align="center" style="color:#fff;" width="100%">
+
+
+
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" style="">
+			<tr>
+
+
+				<td width="100%" align="center" style="color:#fff;" height="50">Technical Analysis
+
+                    <select name="tcs" id="sc_tcs" onchange="fn_tcs()" style="height:24px;">
+
+
+	                    <option value="1m"    > 1 min </option>
+	                    <option value="5m"  selected  > 5 min </option>
+	                    <option value="15m"  > 15 min </option>
+	                    <option value="1h"   > 1 Hour </option>
+	                    <option value="4h"  > 4 Hour </option>
+	                    <option value="1D"  > 1 DAY </option>
+
+                    </select> by TradingView
+
+				</td>
+				
+				
+			</tr>
+			</table>
+	</td>
+</tr>
+
+<tr>
+	<td colspan="2" width="100%" bgcolor="#efefef">
+
+
+
+
+			<table width="1440" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+                <td width="360" HEIGHT="215">
+
+                <div id="vm_gr_1" style="position:relative">
+
+                <iframe   name="g1" id="g1" src="./gs/g1.asp?tcs=5m"  width="360" height="215" scrolling="no" frameborder='0'  marginwidth='0' marginheight='0' ></iframe>
+                </div>
+
+
+
+
+                </TD>
+                <td width="360"  >
+
+                <div id="vm_gr_2" style="position:relative">
+                <iframe   name="g2" id="g2" src="./gs/g2.asp?tcs=5m"  width="360" height="215" scrolling="no" frameborder='0'  marginwidth='0' marginheight='0'  ></iframe>
+                </div>
+
+                </TD>
+                <td width="360"  >
+
+		<div id="vm_gr_3" style="position:relative">
+                <iframe   name="g3" id="g3" src="./gs/g3.asp?tcs=5m"  width="360" height="215" scrolling="no" frameborder='0'  marginwidth='0' marginheight='0'   ></iframe>
+		</div>
+                </TD>
+
+                <td width="360" >
+		<div id="vm_gr_4" style="position:relative">
+                <iframe   name="g4" id="g4" src="./gs/g4.asp?tcs=5m"  width="360" height="215" scrolling="no" frameborder='0'  marginwidth='0' marginheight='0'   ></iframe>
+		</div>
+                </td>
+
+                </TR>
+                </table>
+
+            </td>
+            </tr>
+            </table>
+
+            <table width="1440" border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+
+	<td colspan="2" width="100%" height="40" >
+
+		<div style="z-index:999;background:url('/img/bb.png') repeat;position:absolute;width:1440;height:72">
+
+		</div>
+
+
+ 
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  {
+  "symbols": [
+    {
+      "description": "Binance USDT",
+      "proName": "BINANCE:BTCUSDT"
+    },
+
+    {
+      "description": "BitFinex USDT",
+      "proName": "BITFINEX:BTCUSD"
+    },
+    {
+      "description": "BitThum KRW",
+      "proName": "BITHUMB:BTCKRW"
+    },
+
+    {
+      "description": "BitFlyer JPY",
+      "proName": "BITFLYER:BTCJPY"
+    }
+
+  ],
+  "locale": "en"
+}
+  </script>
+
+
+
+
+
+	</td>
+</tr>
+
+</table>
+
+
+
+        
+<table width="1440" border="0" cellpadding="0" cellspacing="0">
+<tr>
+
+    <td  width="50%">
+            <!-- TradingView Widget BEGIN -->
+              <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <div class="tradingview-widget-container">
+
+  
+              <script type="text/javascript">
+                  new TradingView.widget(
+                  {
+                      "width": 720,
+                      "height": 300,
+                      "symbol": "BITFINEX:BTCUSD",
+                      "interval": "5",
+                      "timezone": "Asia/Seoul",
+                      "theme": "Light",
+                      "style": "1",
+                      "locale": "en",
+                      "toolbar_bg": "#f1f3f6",
+                      "enable_publishing": false,
+                      "hide_legend": true,
+                      "save_image": false,
+                      "container_id": "tradingview_5e52b"
+                  }
+                  );
+              </script>
+            </div>
+            <!-- TradingView Widget END -->
+
+    </td>
+    <td  width="50%">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+
+  
+              <script type="text/javascript">
+                  new TradingView.widget(
+                  {
+                      "width": 720,
+                      "height": 300,
+                      "symbol": "BITMEX:XBTUSD",
+                      "interval": "5",
+                      "timezone": "Asia/Seoul",
+                      "theme": "Light",
+                      "style": "1",
+                      "locale": "en",
+                      "toolbar_bg": "#f1f3f6",
+                      "enable_publishing": false,
+                      "hide_legend": true,
+                      "save_image": false,
+                      "container_id": "tradingview_5e52b"
+                  }
+                  );
+              </script>
+            </div>
+            <!-- TradingView Widget END -->
+
+    </td>
+</tr>
+<tr>
+<td align="center" style="color:#fff;font-size:0.8rem;background:#1d6c9e;" height=30>BITFINEX BTC/USDT  </td>
+<td align="center" style="color:#fff;font-size:0.8rem;background:#1d6c9e;">BITMEX XBT/USD</td>
+</tr>
+</table>
+
+                 </td>
+        </tr>
+    </table>
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#253440" >
+    <tr>
+            <td  align="center" style="background:url('/public/bg_2.png') no-repeat ;" >
+
+
+<table width="1440" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+<tr >
+    <td height="70" colspan="2" align="center" width="100%"  style="color:#fff;font-size:1.4rem;">
+	<img src="/img/logo_bmex.png"  style='vertical-align:top' height="28"  > BITMEX Margin BTC/USD
+    </td>
+</tr>
+
+
+<tr >
+
+    <td width=100% colspan="2" style="padding-top:0px;padding-bottom:10px;">
+
+
+	    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="">
+	    <tr>
+            <td width="28%" style="padding-top:20px;padding-bottom:20px;">
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+
+
+		                    <td width="30%" height="60" style="padding-left:2px;padding-right:2px;text-align:center;color:#fff;background:#2196f3;border-radius:4px 0px 0px 4px;" >
+			                    <span id="tot_long2"  style="font-size:1.8rem;"></span>
+		                    </td>
+
+		                    <td width="40%" style="padding-left:2px;padding-right:2px;text-align:center;color:#fff;background:#2196f3"  >
+			                    &nbsp;<span id="tot_long" style="color:#ffcc00;font-size:1rem;"></span>&nbsp;$
+		                    </td>
+		                    <td width="30%" height="80" style="padding-left:2px;padding-right:2px;text-align:center;color:#efefef;font-size:1.2rem;background:#99bac2;border-radius:0px 4px 4px 0px;" >
+			                    LONGS<br>
+
+		                    </td>
+                        </tr>
+                    </table>
+            </td>
+
+            <td width="7%"></td>
+
+		    <td width="30%" style="padding-left:2px;padding-right:2px;text-align:center;color:#fff;font-size:0.7rem;border:1px solid #999999;border-radius:4px;" >
+				  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+	                        <td align="center" style="font-size:0.7rem;color:#fff" height="22"> Superiority</td>
+                        </tr>
+                        <tr>
+	                        <td align="center"> <span id="tot_usd_title" style="font-size:2.0rem;color:#ccc;"></span> <span id="tot_usd" style="font-size:2.2rem;color:#ffcc00;"></span></td>
+                        </tr>
+
+                        <tr>
+	                        <td align="center" height="22"> <span style="font-size:0.8rem;color:#ffcc00">last 24 hours</span></td>
+                        </tr>
+
+
+			  </table>
+
+
+		    </td>
+            <td width="7%"></td>
+            <td width="28%"  style="padding-top:20px;padding-bottom:20px;">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+		                    <td width="30%" height="80" style="padding-left:2px;padding-right:2px;text-align:center;color:#efefef;font-size:1.2rem;background:#cf8c7c;border-radius:4px 0 0 4px;" >
+			                    SHORTS<br>
+		                    </td>
+		                    <td width="40%" height="40" style="padding-left:2px;padding-right:2px;text-align:center;color:#efefef;background:#c44d2d;" >
+			                    <span id="tot_short"  style="color:#ffcc00;font-size:1rem;"></span>&nbsp;$
+		                    </td>
+		                    <td width="30%" height="60" style="padding-left:2px;padding-right:2px;text-align:center;color:#efefef;background:#c44d2d;border-radius:0 4px 4px 0;" >
+			                    <span id="tot_short2" style="font-size:1.8rem;"></span>
+		                    </td>
+                    </tr>
+
+
+
+                    </table>
+                </td>
+	    </tr>
+	    </table>
+    </td>
+
+		
+</tr>
+</table>
+
+
+
+
+<table width="1440" border="0" cellpadding="0" cellspacing="0"  style="" >
+
+	<tr>
+
+		<td><div id="xbt_tot_1hour"></div>
+		</td>
+
+	</tr>
+
+
+
+</table>
+<br />
+<table width="1440" border="0" cellpadding="0" cellspacing="0"  style="border:1px solid #202d37;" >
+
+<tr>
+	<td>
+
+<iframe name='pt_hoga' id='pt_hoga' src='/public/hoga/xbtusd/'  width='1436' height='100%' style='-webkit-overflow-scrolling:touch;overflow-x:scroll;width:1436;height:355'   scrolling='no'  frameborder='0'  marginwidth='0' marginheight='0'  ></iframe>
+
+	</td>
+
+</tr>
+</table>
+<br />
+<table width="1440" border="0" cellpadding="0" cellspacing="0"  style="background:#202d37;" >
+
+<tr>
+<td width="1080" colspan="1" align="center" >
+    <br />
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="">
+        <tr>
+            <td width="90%">
+	                <div style="width:96%;height:550px;">
+		                <canvas id="canvas"  height="550px"></canvas>
+	                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" align="center">
+                <div id="signal_img"></div><br>
+                <input type="button" value=" 30 Minute " onclick="fn_set_gr(30);" class="btn_chart2" id="btn_rt1">
+                <input type="button" value=" 60 Minute " onclick="fn_set_gr(60);" class="btn_chart" id="btn_rt2">
+                <input type="button" value=" 2 Hours " onclick="fn_set_gr(120);" class="btn_chart" id="btn_rt3">
+                <input type="button" value=" 24 Hours " onclick="fn_set_gr(1);" class="btn_chart" id="btn_rt4">
+                <input type="button" value=" 48 Hours " onclick="fn_set_gr(2);" class="btn_chart" id="btn_rt5">
+                <input type="button" value=" 72 Hours " onclick="fn_set_gr(3);" class="btn_chart" id="btn_rt6">
+            </td>
+        </tr>
+
+    </table>
+
+
+
+</td>
+
+<td width="360" colspan="1"  style="padding:10px;background:#2d3b47;"  valign="top" >
+
+
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="100%" >
+
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; ">
+
+
+
+            <tr>
+            <td width="100%" style="padding-left:2px;padding-right:2px;" >
+		            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#202d37">
+			            <tr>
+				            <td height="30"  align="center"  width="15%"  style='background:#1d6c9e;color:#fff;font-size:0.8rem;'>
+						            LONG
+          			            </td>
+				            <td height="30"  align="center"  width="25%">
+			  	  	            <span id="quote_long21" style='color:#2196f3;font-size:0.8rem;'></span>
+          			            </td>
+
+				            <td align="center"  width="20%" colspan="2">
+
+			  	  	            <span  style='color:#eeeeee;font-size:0.8rem;'>5 Min</span>
+          			            </td>
+			
+
+				            <td align="center"  width="25%">
+
+			  	  	            <span id="quote_short21" style='color:#c44d2d;font-size:0.8rem;'></span>
+          			            </td>
+				            <td height="30"  align="center"  width="15%"  style='background:#c44d2d;color:#fff;font-size:0.8rem;'>
+						            SHORT
+          			            </td>
+			            </tr>
+			            <tr>
+                            <td  style='background:#1d6c9e;color:#fff;font-size:0.8rem;' align="center"><span id="quote_long22" ></span></td>
+				            <td colspan="2" >
+                                                      <div class="w3-white" id="result_bar22">
+                                                        <div class="w3-blue" style="height:20px;width:0%" id="bar_22"></div>
+                                                      </div>
+				            </td>				            
+				            <td colspan="2">
+                                                      <div class="w3-red" id="result_bar21">
+                                                        <div class="w3-white" style="height:20px;width:0%" id="bar_21"></div>
+                                                      </div>
+				            </td>
+
+				            <td style='background:#c44d2d;color:#fff;font-size:0.8rem;' align="center"><span id="quote_short22" ></span></td>
+
+			             </tr>
+		            </table>
+
+            </TD>
+                </tr>
+
+            <tr>
+                <td colspan="4" style="background:#202d37;" height=4></td>
+
+            </tr>
+
+
+	            <tr>
+
+
+            <td width="100%" style="padding-left:2px;padding-right:2px;"   bgcolor="#333">
+
+
+		            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#202d37">
+			            <tr>
+				            <td height="30"  align="center"  width="15%"  style='background:#1d6c9e;color:#fff;font-size:0.8rem;'>
+						            LONG
+          			            </td>
+				            <td height="30"  align="center"  width="25%">
+			  	  	            <span id="quote_long51" style='color:#2196f3;font-size:0.8rem;'></span>
+          			            </td>
+
+				            <td align="center"  width="20%" colspan="2">
+
+			  	  	            <span  style='color:#eee;font-size:0.8rem;'>10 Min</span>
+          			            </td>
+				            <td align="center"  width="25%">
+
+			  	  	            <span id="quote_short51" style='color:#c44d2d;font-size:0.8rem;'></span>
+          			            </td>
+
+				            <td height="30"  align="center"  width="15%"  style='background:#c44d2d;color:#fff;font-size:0.8rem;'>
+						            SHORT
+          			            </td>
+			            </tr>
+			            <tr>
+				            
+                            <td  style='background:#1d6c9e;color:#fff;font-size:0.8rem;' align="center"><span id="quote_long52" ></span></td>
+				            <td colspan="2" >
+                                                      <div class="w3-white" id="result_bar52">
+                                                        <div class="w3-blue" style="height:20px;width:0%" id="bar_52"></div>
+                                                      </div>
+				            </td>
+				            <td colspan="2">
+                                                      <div class="w3-red" id="result_bar51">
+                                                        <div class="w3-white" style="height:20px;width:0%" id="bar_51"></div>
+                                                      </div>
+				            </td>
+
+				            <td style='background:#c44d2d;color:#fff;font-size:0.8rem;' align="center"><span id="quote_short52" ></span></td>
+
+				        </tr>
+		            </table>
+
+
+
+
+            </td>
+                </tr>
+
+
+            <tr>
+                <td colspan="4" style="background:#202d37;" height=4></td>
+
+            </tr>
+
+            <tr>
+            <td width="100%" style="padding-left:2px;padding-right:2px;"   bgcolor="#333">
+
+
+		            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#202d37">
+			            <tr>
+				            <td height="30"  align="center"  width="15%"  style='background:#1d6c9e;color:#fff;font-size:0.8rem;'>
+						            LONG
+          			            </td>
+				            <td height="30"  align="center"  width="25%">
+			  	  	            <span id="quote_long31" style='color:#2196f3;font-size:0.8rem;'></span>
+          			            </td>
+
+				            <td align="center"  width="20%" colspan="2">
+
+			  	  	            <span  style='color:#eee;font-size:0.8rem;'>30 Min</span>
+          			            </td>
+				            <td align="center"  width="25%">
+
+			  	  	            <span id="quote_short31" style='color:#c44d2d;font-size:0.8rem;'></span>
+          			            </td>
+
+				            <td height="30"  align="center"  width="15%"  style='background:#c44d2d;color:#fff;font-size:0.8rem;'>
+						            SHORT
+          			            </td>
+			            </tr>
+			            <tr>
+                            <td  style='background:#1d6c9e;color:#fff;font-size:0.8rem;' align="center"><span id="quote_long32" ></span></td>
+				            <td colspan="2" >
+                                                      <div class="w3-white" id="result_bar32">
+                                                        <div class="w3-blue" style="height:20px;width:0%" id="bar_32"></div>
+                                                      </div>
+				            </td>				            
+				            <td colspan="2">
+                                                      <div class="w3-red" id="result_bar31">
+                                                        <div class="w3-white" style="height:20px;width:0%" id="bar_31"></div>
+                                                      </div>
+				            </td>
+
+				            <td style='background:#c44d2d;color:#fff;font-size:0.8rem;' align="center"><span id="quote_short32" ></span></td>
+
+				        </tr>
+		            </table>
+
+            </TD>
+                </tr>
+
+            <tr>
+                 <td colspan="4" style="background:#202d37;" height=4></td>
+
+            </tr>
+                <tr>
+            <td width="100%" style="padding-left:2px;padding-right:2px;"   bgcolor="#333">
+
+
+		            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#202d37">
+			            <tr>
+				            <td height="30"  align="center"  width="15%"  style='background:#1d6c9e;color:#fff;font-size:0.8rem;'>
+						            LONG
+          			            </td>
+				            <td height="30"  align="center"  width="25%">
+			  	  	            <span id="quote_long41" style='color:#2196f3;font-size:0.8rem;'></span>
+          			            </td>
+				            <td align="center"  width="20%" colspan="2">
+
+			  	  	            <span  style='color:#eee;font-size:0.8rem;'>1 Hour</span>
+          			            </td>
+
+				            <td align="center"  width="25%">
+
+			  	  	            <span id="quote_short41" style='color:#c44d2d;font-size:0.8rem;'></span>
+          			            </td>
+			
+
+
+				            <td height="30"  align="center"  width="15%"  style='background:#c44d2d;color:#fff;font-size:0.8rem;'>
+						            SHORT
+          			            </td>
+			            </tr>
+			            <tr>
+                            <td  style='background:#1d6c9e;color:#fff;font-size:0.8rem;' align="center"><span id="quote_long42" ></span></td>
+				            <td colspan="2" >
+                                                      <div class="w3-white" id="result_bar42">
+                                                        <div class="w3-blue" style="height:20px;width:0%" id="bar_42"></div>
+                                                      </div>
+				            </td>				            
+				            <td colspan="2">
+                                                      <div class="w3-red" id="result_bar41">
+                                                        <div class="w3-white" style="height:20px;width:0%" id="bar_41"></div>
+                                                      </div>
+				            </td>
+
+				            <td style='background:#c44d2d;color:#fff;font-size:0.8rem;' align="center"><span id="quote_short42" ></span></td>
+
+				        </tr>
+		            </table>
+
+            </TD>
+            </tr>
+            <tr>
+                 <td colspan="4" style="background:#202d37;" height=4></td>
+
+            </tr>
+
+
+                <tr>
+            <td width="100%" style="padding-left:2px;padding-right:2px;"   bgcolor="#333">
+
+		            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#202d37">
+			            <tr>
+				            <td height="30"  align="center"  width="15%"  style='background:#1d6c9e;color:#fff;font-size:0.8rem;'>
+						            LONG
+          			            </td>
+				            <td height="30"  align="center"  width="25%">
+			  	  	            <span id="quote_long61" style='color:#2196f3;font-size:0.8rem;'></span>
+          			            </td>
+
+				            <td align="center"  width="20%" colspan="2">
+
+			  	  	            <span  style='color:#eee;font-size:0.8rem;'>2 Hours</span>
+          			            </td>
+				            <td align="center"  width="25%">
+
+			  	  	            <span id="quote_short61" style='color:#c44d2d;font-size:0.8rem;'></span>
+          			            </td>
+			
+
+
+				            <td height="30"  align="center"  width="15%"  style='background:#c44d2d;color:#fff;font-size:0.8rem;'>
+						            SHORT
+          			            </td>
+
+			            </tr>
+			            <tr>
+                            <td  style='background:#1d6c9e;color:#fff;font-size:0.8rem;' align="center"><span id="quote_long62" ></span></td>
+				            <td colspan="2" >
+                                                      <div class="w3-white" id="result_bar62">
+                                                        <div class="w3-blue" style="height:20px;width:0%" id="bar_62"></div>
+                                                      </div>
+				            </td>				            
+				            <td colspan="2">
+                                                      <div class="w3-red" id="result_bar61">
+                                                        <div class="w3-white" style="height:20px;width:0%" id="bar_61"></div>
+                                                      </div>
+				            </td>
+
+				            <td style='background:#c44d2d;color:#fff;font-size:0.8rem;' align="center"><span id="quote_short62" ></span></td>
+
+				        </tr>
+		            </table>
+
+            </td>
+
+            </TR>
+
+            <tr>
+                 <td colspan="4" style="background:#202d37;" height=4></td>
+
+            </tr>
+                <tr>
+            <td width="100%" style="padding-left:2px;padding-right:2px;"   bgcolor="#333">
+
+
+
+
+
+		            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#202d37">
+			            <tr>
+				            <td height="30"  align="center"  width="15%"  style='background:#1d6c9e;color:#fff;font-size:0.8rem;'>
+						            LONG
+          			            </td>
+				            <td height="30"  align="center"  width="25%">
+			  	  	            <span id="quote_long71" style='color:#2196f3;font-size:0.8rem;'></span>
+          			            </td>
+				            <td align="center"  width="20%" colspan="2">
+
+			  	  	            <span  style='color:#eee;font-size:0.8rem;'>4 Hours</span>
+          			            </td>
+			
+
+				            <td align="center"  width="25%">
+
+			  	  	            <span id="quote_short71" style='color:#c44d2d;font-size:0.8rem;'></span>
+          			            </td>
+
+				            <td height="30"  align="center"  width="15%"  style='background:#c44d2d;color:#fff;font-size:0.8rem;'>
+						            SHORT
+          			            </td>
+			            </tr>
+			            <tr>
+				            <td  style='background:#1d6c9e;color:#fff;font-size:0.8rem;' align="center"><span id="quote_long72" ></span></td>
+
+				            <td colspan="2" >
+                                                      <div class="w3-white" id="result_bar72">
+                                                        <div class="w3-blue" style="height:20px;width:0%" id="bar_72"></div>
+                                                      </div>
+				            </td>
+				            <td colspan="2">
+                                                      <div class="w3-red" id="result_bar71">
+                                                        <div class="w3-white" style="height:20px;width:0%" id="bar_71"></div>
+                                                      </div>
+				            </td>				            
+                            <td style='background:#c44d2d;color:#fff;font-size:0.8rem;' align="center"><span id="quote_short72" ></span></td>
+
+				        </tr>
+		            </table>
+            </TD>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="background:#202d37;" height=4></td>
+
+            </tr>
+                <tr>
+            <td width="100%" style="padding-left:2px;padding-right:2px;"  >
+
+
+
+		            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#202d37">
+			            <tr>
+				            <td height="30"  align="center"  width="15%"  style='background:#1d6c9e;color:#fff;font-size:0.8rem;'>
+						            LONG
+          			            </td>
+				            <td height="30"  align="center"  width="25%">
+			  	  	            <span id="quote_long81" style='color:#2196f3;font-size:0.8rem;'></span>
+          			            </td>
+
+				            <td align="center"  width="20%" colspan="2">
+
+			  	  	            <span  style='color:#eee;font-size:0.8rem;'>12 Hours</span>
+          			            </td>
+			
+
+				            <td align="center"  width="25%">
+
+			  	  	            <span id="quote_short81" style='color:#c44d2d;font-size:0.8rem;'></span>
+          			            </td>
+				            <td height="30"  align="center"  width="15%"  style='background:#c44d2d;color:#fff;font-size:0.8rem;'>
+						            SHORT
+          			            </td>
+			            </tr>
+			            <tr>
+				            <td  style='background:#1d6c9e;color:#fff;font-size:0.8rem;' align="center"><span id="quote_long82" ></span></td>
+				            <td colspan="2" >
+                                                      <div class="w3-white" id="result_bar42">
+                                                        <div class="w3-blue" style="height:20px;width:0%" id="bar_82"></div>
+                                                      </div>
+				            </td>
+				            <td colspan="2">
+                                                      <div class="w3-red" id="result_bar41">
+                                                        <div class="w3-white" style="height:20px;width:0%" id="bar_81"></div>
+                                                      </div>
+				            </td>
+
+				            
+                            <td style='background:#c44d2d;color:#fff;font-size:0.8rem;' align="center"><span id="quote_short82" ></span></td>
+				        </tr>
+		            </table>
+
+
+            </td>
+
+            </TR>
+
+
+
+
+
+
+
+        </table>
+
+
+                </td>
+        </tr>
+	<tr>
+		<td align="center" style="padding:5px;">
+	                <div style="width:100%;height:220px;">
+		                <canvas id="canvas3"  height="220px"></canvas>
+	                </div>
+		</td>
+	</tr>
+    </table>
+
+	
+
+</td>
+
+</tr>
+<tr>
+    <td colspan="2"><br /></td>
+</tr>
+<tr>
+    <td colspan="2" style="border-top:2px solid #202d37"></td>
+</tr>
+<tr>
+    <td colspan="2"><br /></td>
+</tr>
+    
+<tr>
+    <td width="1080" colspan="1" align="center" style="padding-bottom:10px;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="">
+            <tr>
+                <td width="90%">
+	                    <div style="width:96%;height:350px;">
+		                    <canvas id="canvas4"  height="350px"></canvas>
+	                    </div>
+
+                </td>
+            </tr>
+            </table>
+        </td>
+        <td width="360" colspan="0" align="center" style="padding:10px;background:#2d3b47;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="color:#eee;font-size:0.9rem;">
+                <tr>
+                    <td width="100%" colspan="2" height="30" align="center" style="background:#2d3b47">Margin XBT/USD distribution in 1 Hour</td>
+        
+                </tr>
+                <tr>
+                    <td  height="10" colspan="2"></td>
+                    
+                </tr>
+                <tr>
+                    <td width="40%" height="30">XBT USD</td>
+                    <td width="60%" style="color:#13c600;"> <i class="fa fa-fw fa-dollar"></i> <span id="xbt_rt"></span></td>
+                </tr>
+                <tr>
+                    <td  height="30">Low XBT price</td>
+                    <td > <i class="fa fa-fw fa-dollar"></i> <span id="xbt_min"></span></td>
+                </tr>
+                <tr>
+                    <td  height="30">High XBT price</td>
+                    <td> <i class="fa fa-fw fa-dollar"></i> <span id="xbt_max"></span></td>
+                </tr>
+                <tr>
+                    <td  height="30">XBT Range</td>
+                    <td> <i class="fa fa-fw fa-dollar"></i> <span id="xbt_range"></span></td>
+                </tr>
+                <tr>
+                    <td  height="10" colspan="2"></td>
+                    
+                </tr>
+                <tr>
+                    <td  height="30">Total trade volume</td>
+                    <td> <i class="fa fa-fw fa-dollar"></i> <span id="xbt_total"></span></td>
+                </tr>
+                <tr>
+                    <td  height="30">Shorts </td>
+                    <td style="color:#ff6384"> <i class="fa fa-fw fa-dollar"></i> <span id="xbt_short"></span></td>
+                </tr>
+                <tr>
+                    <td  height="30">Longs</td>
+                    <td  style="color:#36a2eb"> <i class="fa fa-fw fa-dollar"></i> <span id="xbt_long"></span></td>
+                </tr>
+          
+            </table>
+
+        </td>
+    
+</tr>
+
+
+</table>
+<br />
+
+                </td>
+        </tr>
+    </table>
+
+	<div id='result_zone' style="display:none"></div>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+    <tr>
+            <td style="background:#253440" align="center">
+
+
+
+                <table width="1440" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+
+	                <tr>
+		                <td height="250" style="color:#aaa;padding:5px;" align="center">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+                                <tr>
+                                    <td width="350" height="250" style="background:#000;color:#555;font-size:0.8rem;text-align:center;">
+
+                <div id="ad_b1"></div>
+                                    </td>
+                                    <td width="10"      style=""></td>
+                                    <td width="350"     style="background:#000;color:#555;font-size:0.8rem;text-align:center;">
+
+                <div id="ad_b2"></div>
+
+                                    </td>
+                                    <td width="10"      style=""></td>
+                                    <td width="350"     style="background:#000;color:#555;font-size:0.8rem;text-align:center;">
+                <div id="ad_b3"></div>
+
+
+                                    </td>
+                                    <td width="10"      style=""></td>
+                                    <td width="350"     style="background:#000;color:#555;font-size:0.8rem;text-align:center;">
+                <div id="ad_b4"></div>
+
+                                    </td>
+                                </tr>
+                                </table>
+
+		                </td>
+	                <tr>
+
+                </table>
+
+                </td>
+        </tr>
+    <caption
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+    <tr>
+            <td style="background:#1d6c9e" align="center">
+                <table width="1440" border="0" cellpadding="0" cellspacing="0"  style="font-size:0.9rem;" >
+                <tr>
+                    <td align="center" height="10">
+                        	
+                    </td>
+                </tr>
+
+   
+
+                <tr>
+                    <td colspan="2" height="40" align="center" style="color:#fff;background:#1d6c9e;font-size:1rem;padding-top:10px;">
+
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                            <tr>
+                            <td width="33%" valign="top" style="padding:10px;font-size:0.9rem;color:#eee;">
+                                <img src="/public/logo.png" width="300" />
+                                <br />
+                              
+
+                                Coinfarm is a crypto-products trading & information platform.<br />
+                                the apps and datas issued under Coinfarm are wholly owned and operated by Coinfarm Glober LLC
+                                a Nevis incorporated entity or its relevant authorized affiliates.<br />
+
+
+                      
+
+                            </td>
+                            <td width="43%" style="padding:10px;color:#eee;font-size:0.9rem;"  valign="bottom" align="center">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+                            <tr>
+                                <td  valign="top" style="padding:10px;font-size:0.9rem;color:#eee;cursor:pointer;" onclick="window.open('/public/coinfarm/terms.asp','_self');">
+                                  Terms of Service
+                                </td>
+                                <td  valign="top" style="padding:10px;font-size:0.9rem;color:#eee;cursor:pointer;" onclick="window.open('/public/coinfarm/Policy.asp','_self');">
+                                 Privacy Policy
+                                </td>
+                                <td  valign="top" style="padding:10px;font-size:0.9rem;color:#eee;cursor:pointer;" onclick="window.open('/public/coinfarm/security.asp','_self');">
+                                 Security Practices
+                                </td>
+                                <td  valign="top" style="padding:10px;font-size:0.9rem;color:#eee;cursor:pointer;" onclick="window.open('mailto:webmaster@coinfarm.online','_new');">
+                                  Email Contact
+                                </td>
+                            </tr>
+                            </table>
+
+                                
+                            </td>
+                     
+                            <td  width="23%"  style="padding:10px;color:#fff;background:#1d6c9e;font-size:0.9rem;padding-left:50px;" align="center"   valign="bottom">
+                                    <a href='https://twitter.com/CoinfarmO' target='_new'> 	<img src='/img/tw.png' width='100'></a>
+                      
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+
+                </tr>
+                <tr>
+                    <td align="center" height="40">
+                        	
+                    </td>
+                </tr>
+
+
+                </table>
+                </td>
+        </tr>
+
+</TABLE>
+</center>
+<div id="vm_btc" style="display:none;"></div>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5557727889598339",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+
+<script>
+function fn_timezone() {
+  var offset = new Date().getTimezoneOffset(), o = Math.abs(offset);
+  return (offset < 0 ? "+" : "-") + ("00" + Math.floor(o / 60)).slice(-2) + ":" + ("00" + (o % 60)).slice(-2);
+}
+
+
+
+fn_ad_b1();
+
+
+fn_ad_b2();
+
+
+fn_ad_b3();
+
+
+fn_ad_b4();
+
+
+
+function fn_ad_b1() {
+
+    $.ajax({
+        type: "POST"
+    , async: true
+    , url: "/ad/b1.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response) {
+
+            $('#ad_b1').html(response);
+
+
+        }
+
+	});
+
+
+}
+
+
+function fn_ad_b2() {
+
+    $.ajax({
+        type: "POST"
+    , async: true
+    , url: "/ad/b2.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response) {
+
+            $('#ad_b2').html(response);
+
+
+        }
+
+	});
+
+
+}
+
+function fn_ad_b3() {
+
+    $.ajax({
+        type: "POST"
+    , async: true
+    , url: "/ad/b3.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response) {
+
+            $('#ad_b3').html(response);
+
+
+        }
+
+	});
+
+
+}
+
+function fn_ad_b4() {
+
+    $.ajax({
+        type: "POST"
+    , async: true
+    , url: "/ad/b4.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response) {
+
+            $('#ad_b4').html(response);
+
+
+        }
+
+	});
+
+
+}
+
+</script>
+</boby>
+
+
+
+</TABLE>
+</center>
+<script language="javascript">
+
+var pp = {
+			afterDatasetsDraw: function(chart) {
+				var ctx3 = chart.ctx;
+
+				var cn_0 = 0;
+				var cn_1 = 0;
+				var cn_b = 0;
+				var cn_y0 = 0;
+				var cn_y1 = 0;
+
+				var len_0 = 0;
+				var len_1 = 0;
+
+				chart.data.datasets.forEach(function(dataset, i) {
+					var cnt=0;
+					var cnt2 = 0;
+					var top_0 = 0;
+					var top_1 = 0;
+					var ds = 0;
+					var work = 0;
+
+
+					var meta = chart.getDatasetMeta(i);
+					if (!meta.hidden) {
+						meta.data.forEach(function(element, index) {
+							
+							cnt++;
+							ds = parseFloat(dataset.data[index].toString());
+
+							if ( i == 0 ){
+								
+								if ( ds >= top_0 ){
+									top_0 = ds;
+								}
+							}
+							if ( i == 1 ){
+							
+								if ( ds >= top_1 ){
+									top_1 = ds;
+								}
+							}
+
+						});
+
+
+
+						meta.data.forEach(function(element, index) {
+							cnt2++;
+							work = 0;
+
+							var dataString = dataset.data[index].toString();
+
+							if ( cnt != cnt2 ){
+								if ( i == 0 ){
+									if ( dataString == top_0){
+										work = 1;
+									}
+								}
+								if ( i == 1 ){
+									if ( dataString == top_1){
+										work = 1;
+									}
+								}
+							}
+
+							if ( i == 0 ){
+								ctx3.fillStyle = 'rgb(255, 172, 219)';
+							}else{
+								ctx3.fillStyle = 'rgb(168, 213, 248)';
+
+							}
+
+							if (  work == 1 ){
+								
+
+								var fontSize = 11;
+								var fontStyle = 'normal';
+								var fontFamily = 'Arial';
+								ctx3.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+								
+
+								ctx3.textAlign = 'right';
+								ctx3.textBaseline = 'middle';
+
+								var padding = 2;
+								var position = element.tooltipPosition();
+
+							var ts = '' + dataString.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+						
+
+							if ( i == 0 ){
+								ctx3.fillText( ts, position.x - 5, position.y - (fontSize / 2) - padding);
+							}else{
+								ctx3.fillText( ts, position.x - 5 , position.y + (fontSize / 2) + padding);
+							}
+							}
+
+
+
+							if ( cnt == cnt2 ){
+						
+
+							var fontSize = 11;
+							var fontStyle = 'normal';
+							var fontFamily = 'Arial';
+							ctx3.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+							
+
+							// Make sure alignment settings are correct
+							ctx3.textAlign = 'right';
+							ctx3.textBaseline = 'middle';
+
+							var padding = 2;
+							var position = element.tooltipPosition();
+
+
+							var ts = '' + dataString.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+						
+
+							if ( i == 0 ){
+
+								ctx3.fillText( ts, position.x - 5, position.y - (fontSize / 2) - padding);
+								cn_0 = dataString.toString();
+								cn_y0 =  position.y - (fontSize / 2) - padding;
+								len_0 = ts.length * 3;
+
+							}else{
+								ctx3.fillText( ts, position.x - 5 , position.y + (fontSize / 2) + padding);
+								cn_1 = parseFloat(dataString.toString());
+								cn_y1 = position.y - (fontSize / 2) + padding;
+								len_1 = ts.length * 3;
+							}
+
+							if ( i == 1 ){
+								cn_b = cn_1 - cn_0;
+
+								ctx3.fillStyle = 'rgb(255, 204, 0)';
+
+								
+
+	                            ctx3.strokeStyle = "#ffcc00";
+                                    ctx3.lineWidth = 1;
+                                    ctx3.beginPath();
+
+	                            var tts = '' + cn_b.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+	                            if (len_0 >= len_1 ){
+        	                            ctx3.moveTo(position.x - ( 40 +  len_0 )  , cn_y1 + 10 );
+	                                    ctx3.lineTo(position.x - ( 40 +  len_0 ) , cn_y0 );
+		                            ctx3.fillText( tts, position.x - ( 50 +  len_0 ) ,  ( cn_y1  + cn_y0 ) / 2 + 5 );
+	                            }else{
+        	                            ctx3.moveTo(position.x - ( 40 +  len_1 )  , cn_y1 + 10 );
+	                                    ctx3.lineTo(position.x - ( 40 +  len_1 ) , cn_y0 );
+		                            ctx3.fillText( tts, position.x - ( 50 +   len_1 ) ,  ( cn_y1  + cn_y0 ) / 2 + 5 );	
+		                        }
+
+                                    ctx3.stroke();							
+
+
+							}
+							}
+
+						});
+					}
+				});
+			}
+	}
+
+
+
+
+var pp2 = {
+			afterDatasetsDraw: function(chart) {
+				var ctx3 = chart.ctx;
+
+				var cn_0 = 0;
+				var cn_1 = 0;
+				var cn_b = 0;
+				var cn_y0 = 0;
+				var cn_y1 = 0;
+
+				var len_0 = 0;
+				var len_1 = 0;
+
+				chart.data.datasets.forEach(function(dataset, i) {
+					var cnt=0;
+					var cnt2 = 0;
+					var top_0 = 0;
+					var top_1 = 0;
+					var ds = 0;
+					var work = 0;
+
+
+					var meta = chart.getDatasetMeta(i);
+					if (!meta.hidden) {
+						meta.data.forEach(function(element, index) {
+							
+							cnt++;
+							ds = parseFloat(dataset.data[index].toString());
+
+							if ( i == 0 ){
+								
+								if ( ds >= top_0 ){
+									top_0 = ds;
+								}
+							}
+							if ( i == 1 ){
+							
+								if ( ds >= top_1 ){
+									top_1 = ds;
+								}
+							}
+
+						});
+
+
+
+						meta.data.forEach(function(element, index) {
+							cnt2++;
+							work = 0;
+
+							var dataString = dataset.data[index].toString();
+
+							if ( cnt != cnt2 ){
+								if ( i == 0 ){
+									if ( dataString == top_0){
+										work = 1;
+									}
+								}
+								if ( i == 1 ){
+									if ( dataString == top_1){
+										work = 1;
+									}
+								}
+							}
+
+							if ( i == 0 ){
+								ctx3.fillStyle = 'rgb(255, 172, 219)';
+							}else{
+								ctx3.fillStyle = 'rgb(168, 213, 248)';
+
+							}
+
+							if (  work == 1 ){
+								
+
+								var fontSize = 11;
+								var fontStyle = 'normal';
+								var fontFamily = 'Arial';
+								ctx3.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+								
+
+								ctx3.textAlign = 'right';
+								ctx3.textBaseline = 'middle';
+
+								var padding = 2;
+								var position = element.tooltipPosition();
+
+							var ts = '' + dataString.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+						
+
+							if ( i == 0 ){
+								ctx3.fillText( ts, position.x - 5, position.y - (fontSize / 2) - padding);
+							}else{
+								ctx3.fillText( ts, position.x - 5 , position.y + (fontSize / 2) + padding);
+							}
+							}
+
+
+
+							if ( cnt == cnt2 ){
+						
+
+							var fontSize = 12;
+							var fontStyle = 'normal';
+							var fontFamily = 'Arial';
+							ctx3.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+							
+
+							// Make sure alignment settings are correct
+
+							ctx3.textAlign = 'center';
+							ctx3.textBaseline = 'middle';
+
+							var padding = 4;
+							var position = element.tooltipPosition();
+
+
+							var ts = '' + dataString.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+						
+
+							if ( i == 0 ){
+
+								ctx3.fillText( '$ ' + ts, position.x , position.y - (fontSize / 2) - padding);
+								cn_0 = dataString.toString();
+								cn_y0 =  position.y - (fontSize / 2) - padding;
+								len_0 = ts.length * 3;
+
+							}else{
+								ctx3.fillText('$ ' + ts, position.x  , position.y - (fontSize / 2) - padding);
+								cn_1 = parseFloat(dataString.toString());
+								cn_y1 = position.y - (fontSize / 2) + padding;
+								len_1 = ts.length * 3;
+							}
+
+							if ( i == 1 ){
+								cn_b = cn_1 - cn_0;
+
+								ctx3.fillStyle = 'rgb(255, 204, 0)';
+
+						
+
+
+							}
+							}
+
+						});
+					}
+				});
+			}
+	}
+
+
+
+
+</script>
+<script language="javascript">
+
+
+
+var pp101 = {
+			afterDatasetsDraw: function(chart) {
+				var ctx_101 = chart.ctx;
+
+				var cn_0 = 0;
+				var cn_1 = 0;
+				var cn_b = 0;
+				var cn_y0 = 0;
+				var cn_y1 = 0;
+
+				var len_0 = 0;
+				var len_1 = 0;
+
+
+
+				chart.data.datasets.forEach(function(dataset, i) {
+					var cnt=0;
+					var cnt2 = 0;
+					var top_0 = 0;
+					var top_1 = 0;
+					var ds = 0;
+					var work = 0;
+
+
+					var meta = chart.getDatasetMeta(i);
+					if (!meta.hidden) {
+
+
+
+						meta.data.forEach(function(element, index) {
+							
+							cnt++;
+							ds = parseFloat(dataset.data[index].toString());
+
+							if ( i == 0 ){
+								
+								if ( ds <= top_0 ){
+									top_0 = ds;
+								}
+							}
+							if ( i == 1 ){
+							
+								if ( ds >= top_1 ){
+									top_1 = ds;
+								}
+							}
+
+						});
+
+
+
+						meta.data.forEach(function(element, index) {
+							cnt2++;
+							work = 0;
+
+							var dataString = dataset.data[index].toString();
+			
+							if ( cnt != cnt2 ){
+								if ( i == 0 ){
+									if ( dataString == top_0){
+										work = 1;
+									}
+								}
+								if ( i == 1 ){
+									if ( dataString == top_1){
+										work = 1;
+									}
+								}
+							}
+
+							if ( i == 0 ){
+								ctx_101.fillStyle = 'rgb(255, 172, 219)';
+							}else{
+								ctx_101.fillStyle = 'rgb(168, 213, 248)';
+
+							}
+
+
+
+
+							if (  work == 1 ){
+								
+
+								var fontSize = 11;
+								var fontStyle = 'normal';
+								var fontFamily = 'Arial';
+								ctx_101.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+								
+
+								ctx_101.textAlign = 'right';
+								ctx_101.textBaseline = 'middle';
+
+								var padding = 10;
+								var position = element.tooltipPosition();
+
+								
+
+								var ts =   '' + dataString.toString();
+						
+
+
+
+
+							    if ( i == 0 ){
+								    ctx_101.fillText( ts, position.x, position.y - (fontSize / 2) + padding);
+							    }else{
+							        ctx_101.fillText( ts, position.x, position.y + (fontSize / 2) - padding);
+							    }
+
+                                
+							}
+
+							var vol = chart.data.labels[cnt2];
+
+							if (i == 0) {
+
+							    if (parseFloat(xbt_rt) == parseFloat(vol)) {
+
+							        var position = element.tooltipPosition();
+							       
+							        ctx_101.fillStyle = 'rgb(19, 198, 0)';
+							        ctx_101.textAlign = 'left';
+							        ctx_101.textBaseline = 'middle';
+
+							        var vts = '▲ ' + xbt_rt;
+
+							        ctx_101.fillText(vts, position.x + 1, 294);
+
+
+
+							    }
+							}
+
+
+						});
+					}
+				});
+			}
+	}
+
+
+
+
+var pp101u = {
+			afterDatasetsDraw: function(chart) {
+				var ctx_101 = chart.ctx;
+
+				var cn_0 = 0;
+				var cn_1 = 0;
+				var cn_b = 0;
+				var cn_y0 = 0;
+				var cn_y1 = 0;
+
+				var len_0 = 0;
+				var len_1 = 0;
+
+
+
+				chart.data.datasets.forEach(function(dataset, i) {
+					var cnt=0;
+					var cnt2 = 0;
+					var top_0 = 0;
+					var top_1 = 0;
+					var ds = 0;
+					var work = 0;
+
+
+					var meta = chart.getDatasetMeta(i);
+					if (!meta.hidden) {
+
+
+
+						meta.data.forEach(function(element, index) {
+							
+							cnt++;
+							ds = parseFloat(dataset.data[index].toString());
+
+							if ( i == 0 ){
+								
+								if ( ds <= top_0 ){
+									top_0 = ds;
+								}
+							}
+							if ( i == 1 ){
+							
+								if ( ds >= top_1 ){
+									top_1 = ds;
+								}
+							}
+
+						});
+
+
+
+						meta.data.forEach(function(element, index) {
+							cnt2++;
+							work = 0;
+
+							var dataString = dataset.data[index].toString();
+			
+							if ( cnt != cnt2 ){
+								if ( i == 0 ){
+									if ( dataString == top_0){
+										work = 1;
+									}
+								}
+								if ( i == 1 ){
+									if ( dataString == top_1){
+										work = 1;
+									}
+								}
+							}
+
+							if ( i == 0 ){
+								ctx_101.fillStyle = 'rgb(255, 172, 219)';
+							}else{
+								ctx_101.fillStyle = 'rgb(168, 213, 248)';
+
+							}
+
+
+
+
+							if (  work == 1 ){
+								
+
+								var fontSize = 11;
+								var fontStyle = 'normal';
+								var fontFamily = 'Arial';
+								ctx_101.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+								
+
+								ctx_101.textAlign = 'right';
+								ctx_101.textBaseline = 'middle';
+
+								var padding = 10;
+								var position = element.tooltipPosition();
+
+								
+
+								var ts =   '$' + dataString.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+						
+
+
+
+
+							    if ( i == 0 ){
+								    ctx_101.fillText( ts, position.x, position.y - (fontSize / 2) + padding);
+							    }else{
+							        ctx_101.fillText( ts, position.x, position.y + (fontSize / 2) - padding);
+							    }
+
+                                
+							}
+
+							var vol = chart.data.labels[cnt2];
+
+							if (i == 0) {
+
+							    if (parseFloat(xbt_rt) == parseFloat(vol)) {
+
+							        var position = element.tooltipPosition();
+							       
+							        ctx_101.fillStyle = 'rgb(19, 198, 0)';
+							        ctx_101.textAlign = 'left';
+							        ctx_101.textBaseline = 'middle';
+
+							        var vts = '▲ ' + xbt_rt;
+
+							        ctx_101.fillText(vts, position.x + 1, 294);
+
+
+
+							    }
+							}
+
+
+						});
+					}
+				});
+			}
+	}
+
+</script>
+
+    </body>
+    </html>
+
+<script language="javascript">
+
+
+	var gmt = fn_timezone();
+
+
+
+    fn_btc();
+
+    var timer20 = setInterval('fn_btc()', 10000);
+
+
+    var timer31 = setInterval('fn_hc_loop()', 1000);
+
+
+    
+   fn_trade_tx();
+
+    
+    var timer42 = setInterval('fn_trade_tx()', 5000);
+
+    fn_trade_tot()
+
+    var timer55 = setInterval('fn_trade_tot()', 10100);
+
+
+
+
+
+    var dataPoints = [];
+
+
+
+    var lineChartData = {
+        labels: [],
+        datasets: [{
+            label: 'SHORTS ',
+            borderColor: window.chartColors.red,
+            backgroundColor: window.chartColors.red,
+            fill: false,
+            data: []
+
+        }, {
+            label: 'LONGS  ',
+            borderColor: window.chartColors.blue,
+            backgroundColor: window.chartColors.blue,
+            fill: false,
+            data: []
+        }]
+    };
+
+    var ctx = document.getElementById('canvas').getContext('2d');
+
+
+    var config = {
+        type: 'line',
+        plugins: [pp],
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'SHORTS ',
+                borderColor: window.chartColors.red,
+                backgroundColor: window.chartColors.red,
+                fill: false,
+                data: []
+
+            }, {
+                label: 'LONGS  ',
+                borderColor: window.chartColors.blue,
+                backgroundColor: window.chartColors.blue,
+                fill: false,
+                data: []
+            }]
+
+        },
+        options: {
+            responsive: true,
+            hoverMode: 'index',
+            stacked: true,
+
+            maintainAspectRatio: false,
+
+
+            title: {
+                display: true,
+                text: 'loadding...',
+                fontColor: '#dedede'
+
+            },
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        var tooltipValue = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                        return parseInt(tooltipValue).toLocaleString();
+                    }
+                }
+            },
+
+
+            scales: {
+                yAxes: [{
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    id: 'y-axis-1',
+
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value, index, values) {
+                            if (parseInt(value) >= 1000) {
+                                return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                            } else {
+                                return '$' + value;
+                            }
+                        }
+                    }
+
+
+                }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    id: 'y-axis-2',
+
+                    gridLines: {
+                        drawOnChartArea: false, // only want the grid lines for one axis to show up
+                    },
+                }],
+            }
+        }
+
+    }
+
+
+
+
+    var randomScalingFactor = function () {
+        return Math.ceil(Math.random() * 10.0) * Math.pow(10, Math.ceil(Math.random() * 5));
+    };
+
+    window.myLine = new Chart(ctx, config);
+
+    var gr_timing = 1;
+
+    function fn_set_gr(set) {
+
+        if (set == 30) {
+            gr_timing = 1;
+
+            $("#btn_rt1").attr('class', 'btn_chart2');
+            $("#btn_rt2").attr('class', 'btn_chart');
+            $("#btn_rt3").attr('class', 'btn_chart');
+            $("#btn_rt4").attr('class', 'btn_chart');
+            $("#btn_rt5").attr('class', 'btn_chart');
+            $("#btn_rt6").attr('class', 'btn_chart');
+            
+
+        } else if (set == 60) {
+            gr_timing = 2;
+            $("#btn_rt1").attr('class', 'btn_chart');
+            $("#btn_rt2").attr('class', 'btn_chart2');
+            $("#btn_rt3").attr('class', 'btn_chart');
+            $("#btn_rt4").attr('class', 'btn_chart');
+            $("#btn_rt5").attr('class', 'btn_chart');
+            $("#btn_rt6").attr('class', 'btn_chart');
+        } else if (set == 120) {
+            gr_timing = 3;
+            $("#btn_rt1").attr('class', 'btn_chart');
+            $("#btn_rt2").attr('class', 'btn_chart');
+            $("#btn_rt3").attr('class', 'btn_chart2');
+            $("#btn_rt4").attr('class', 'btn_chart');
+            $("#btn_rt5").attr('class', 'btn_chart');
+            $("#btn_rt6").attr('class', 'btn_chart');
+        } else if (set == 1) {
+            gr_timing = 4;
+            $("#btn_rt1").attr('class', 'btn_chart');
+            $("#btn_rt2").attr('class', 'btn_chart');
+            $("#btn_rt3").attr('class', 'btn_chart');
+            $("#btn_rt4").attr('class', 'btn_chart2');
+            $("#btn_rt5").attr('class', 'btn_chart');
+            $("#btn_rt6").attr('class', 'btn_chart');
+        } else if (set == 2) {
+            gr_timing = 5;
+            $("#btn_rt1").attr('class', 'btn_chart');
+            $("#btn_rt2").attr('class', 'btn_chart');
+            $("#btn_rt3").attr('class', 'btn_chart');
+            $("#btn_rt4").attr('class', 'btn_chart');
+            $("#btn_rt5").attr('class', 'btn_chart2');
+            $("#btn_rt6").attr('class', 'btn_chart');
+        } else {
+            gr_timing = 6;
+            $("#btn_rt1").attr('class', 'btn_chart');
+            $("#btn_rt2").attr('class', 'btn_chart');
+            $("#btn_rt3").attr('class', 'btn_chart');
+            $("#btn_rt4").attr('class', 'btn_chart');
+            $("#btn_rt5").attr('class', 'btn_chart');
+            $("#btn_rt6").attr('class', 'btn_chart2');
+        }
+    }
+
+
+
+    function fn_json_gr() {
+
+        fn_json_gr_do(gr_timing);
+    }
+
+    function fn_json_gr_do(timing) {
+
+
+
+        var url_q;
+
+        if (timing == 1) {
+            url_q = '/public/ws/gr_json_0030.asp';
+        } else if (timing == 2) {
+            url_q = '/public/ws/gr_json_0060.asp';
+        } else if (timing == 3) {
+            url_q = '/public/ws/gr_json_0120.asp';
+        }else if (timing == 4) {
+                url_q = '/public/ws/gr_json_1030.asp?days=1';
+        } else if (timing == 5) {
+                url_q = '/public/ws/gr_json_1030.asp?days=2';
+        } else if (timing == 6) {
+                url_q = '/public/ws/gr_json_1030.asp?days=3';
+
+        } else {
+            return;
+        }
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: url_q
+        , dataType: "json"
+        , timeout: 5000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+            var data_v = [], data_l = [], data_s = [];
+            response["data"].forEach(function (da) {
+                data_v.push(da.v);
+                data_l.push(parseInt(da.l));
+                data_s.push(parseInt(da.s));
+            });
+
+            var bal = response.total_balance;
+            bal = bal.substring(0, 1);
+
+            config.data.labels = data_v;
+
+            if (bal != '-') {
+                config.options.title.text = 'Superiority Long $ ' + response.total_balance;
+
+                config.options.title.fontColor = window.chartColors.blue;
+            } else {
+
+                config.options.title.text = 'Superiority, Short $ ' + response.total_balance;
+                config.options.title.fontColor = window.chartColors.red;
+            }
+
+
+            config.data.datasets[0].label = 'Short ' + response.total_s + ' (' + response.per_s + ' % )';
+            config.data.datasets[1].label = 'Long ' + response.total_b + ' (' + response.per_b + ' % )';
+
+            config.data.datasets[0].data = data_s;
+            config.data.datasets[1].data = data_l;
+
+            window.myLine.update();
+
+
+        }
+        });
+
+
+    }
+
+
+
+
+
+    //---------------------------------------------------------------------//
+
+    var ctx3 = document.getElementById('canvas3').getContext('2d');
+
+
+
+    var lineChartData3 = {
+	labels: ['Short','Long'],
+   
+        datasets: [{
+            label: 'SHORTS ',
+            borderColor: window.chartColors.red,
+            backgroundColor: window.chartColors.red,
+            fill: false,
+            data: [0]
+
+        }, {
+            label: 'LONGS  ',
+            borderColor: window.chartColors.blue,
+            backgroundColor: window.chartColors.blue,
+            fill: false,
+            data: [0]
+        }]
+    };
+
+
+    var config3 = {
+        type: 'bar',
+        plugins: [pp2],
+        data: {
+          
+            datasets: [{
+                label: 'SHORTS ',
+                borderColor: window.chartColors.red,
+                backgroundColor: window.chartColors.red,
+                fill: false,
+                data: [0]
+
+            }, {
+                label: 'LONGS  ',
+                borderColor: window.chartColors.blue,
+                backgroundColor: window.chartColors.blue,
+                fill: false,
+                data: [0]
+            }]
+
+        },
+  options: {
+            responsive: true,
+            hoverMode: 'index',
+            stacked: true,
+
+            maintainAspectRatio: false,
+    legend: {
+        display: false
+    },
+
+            title: {
+                display: true,
+                text: 'loadding...',
+                fontColor: '#dedede'
+
+            },
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        var tooltipValue = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                        return parseInt(tooltipValue).toLocaleString();
+                    }
+                }
+            },
+
+
+            scales: {
+                yAxes: [{
+                    type: 'linear',
+                    display: false,
+                    position: 'left',
+                    id: 'y-axis-1',
+
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value, index, values) {
+                            if (parseInt(value) >= 1000) {
+                                return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                            } else {
+                                return '$' + value;
+                            }
+                        }
+                    }
+
+
+                }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    id: 'y-axis-2',
+
+                    gridLines: {
+                        drawOnChartArea: false, // only want the grid lines for one axis to show up
+                    },
+                }]
+            }
+}
+    }
+
+    var gr_timing3 = 1;
+
+
+
+
+    function fn_json_gr3() {
+
+        fn_json_gr_do3(gr_timing3);
+    }
+
+    function fn_json_gr_do3(timing) {
+
+
+
+        var url_q;
+
+    
+            url_q = 'trade_lq.asp?hour=12';
+
+	url_q = url_q +  "&gmt=" + gmt
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: "/public/ws/" + url_q
+        , dataType: "json"
+        , timeout: 5000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+
+		var tot_l, tot_s;
+
+
+            var data_l = [], data_s = [];
+            response["data"].forEach(function (da) {
+                data_l.push(parseInt(da.long));
+		
+                data_s.push(parseInt(da.short));
+
+		tot_l = da.long;
+		tot_s = da.short;
+            });
+
+    		
+        
+
+
+                config3.options.title.text = ' Last in 8Hours REKT';
+
+                config3.options.title.fontColor = window.chartColors.grey;
+
+
+            config3.data.datasets[0].label = '' + tot_s ;
+            config3.data.datasets[1].label = '' + tot_l ;
+
+            config3.data.datasets[0].data = data_s;
+            config3.data.datasets[1].data = data_l;
+
+            window.myLine3.update();
+
+
+        }
+        });
+
+
+    }
+
+    window.myLine3 = new Chart(ctx3, config3);
+
+
+
+
+
+    //---------------------------------------------------------------------//
+
+    var ctx4 = document.getElementById('canvas4').getContext('2d');
+
+
+
+    var lineChartData4 = {
+        labels: [],
+        datasets: [{
+            label: 'SHORTS ',
+            borderColor: window.chartColors.red,
+            backgroundColor: window.chartColors.red,
+            fill: false,
+            data: []
+
+        }, {
+            label: 'LONGS  ',
+            borderColor: window.chartColors.blue,
+            backgroundColor: window.chartColors.blue,
+            fill: false,
+            data: []
+        }]
+    };
+
+
+    var config4 = {
+        type: 'bar',
+        plugins: [pp101u],
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'SHORTS ',
+                borderColor: window.chartColors.red,
+                backgroundColor: window.chartColors.red,
+                fill: false,
+                data: []
+
+            }, {
+                label: 'LONGS  ',
+                borderColor: window.chartColors.blue,
+                backgroundColor: window.chartColors.blue,
+                fill: false,
+                data: []
+            }]
+
+        },
+        options: {
+            responsive: true,
+            hoverMode: 'index',
+            stacked: true,
+
+            maintainAspectRatio: false,
+
+
+            title: {
+                display: true,
+                text: 'loadding...',
+                fontColor: '#dedede'
+
+            },
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        var tooltipValue = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                        return parseInt(tooltipValue).toLocaleString();
+                    }
+                }
+            },
+
+
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                }],
+
+                yAxes: [{
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    id: 'y-axis-1',
+                    stacked: true,
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value, index, values) {
+                            if (parseInt(value) >= 1000) {
+                                return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                            } else {
+                                return '$' + value;
+                            }
+                        }
+                    }
+
+
+                }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    id: 'y-axis-2',
+                    stacked: true,
+
+                    gridLines: {
+                        drawOnChartArea: false, // only want the grid lines for one axis to show up
+                    },
+                }],
+            }
+        }
+
+    }
+
+    var gr_timing4 = 1;
+
+
+    function fn_set_gr4(set) {
+
+        clearInterval(timer94);
+
+
+
+        $("#btn_2rt1").attr('class', 'btn_chart');
+        $("#btn_2rt2").attr('class', 'btn_chart');
+        $("#btn_2rt3").attr('class', 'btn_chart');
+
+
+
+        fn_json_gr4();
+
+        var timer94 = setInterval('fn_json_gr4()', 30000);
+
+    }
+
+
+
+    function fn_json_gr4() {
+
+        fn_json_gr_do4(gr_timing4);
+    }
+
+    var xbt_rt = 0;
+
+
+
+    function fn_json_gr4() {
+
+        fn_json_gr_do4(gr_timing4);
+    }
+
+    var xbt_rt = 0;
+
+
+    function fn_json_gr_do4(timing) {
+
+
+
+        var url_q;
+
+        url_q = '/public/json/gr_json_3000u2.asp?gmt=' + gmt;
+
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url:  url_q
+        , dataType: "json"
+        , timeout: 20000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+            var data_v = [], data_l = [], data_s = [];
+
+            var cnt = 0;
+
+
+	    var xbt_max = response.xbt_max;
+	    var xbt_min = response.xbt_min;
+
+	    $('#xbt_min').html(xbt_min);
+	    $('#xbt_max').html(xbt_max);       
+     
+	    $('#xbt_range').html(xbt_max - xbt_min);
+
+
+            response["data"].forEach(function (da) {
+
+
+
+                data_v.push(da.v);
+                data_l.push(parseInt(da.l));
+                data_s.push(parseInt(da.s));
+
+
+            });
+
+            xbt_rt = response.xbt;
+
+
+
+            $('#xbt_rt').html(response.xbt);
+
+            $('#xbt_total').html(response.tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            $('#xbt_short').html(response.total_s + ' ( ' + response.per_s + ' % )');
+            $('#xbt_long').html(response.total_b + ' ( ' + response.per_b + ' % )');
+
+
+            var bal = response.total_balance;
+            bal = bal.substring(0, 1);
+
+
+
+
+            config4.data.labels = data_v;
+
+            config4.data.datasets[0].data = data_s;
+            config4.data.datasets[1].data = data_l;
+
+            if (bal != '-') {
+                config4.options.title.text = 'Superiority, LONGS : ' + response.total_balance + '';
+
+                config4.options.title.fontColor = window.chartColors.blue;
+            } else {
+
+                config4.options.title.text = 'Superiority, SHORTS : ' + response.total_balance + ' ';
+                config4.options.title.fontColor = window.chartColors.red;
+            }
+
+
+            config4.data.datasets[0].label = 'SHORTS ' + response.total_s + ' (' + response.per_s + ' % )';
+            config4.data.datasets[1].label = 'LONGS ' + response.total_b + ' (' + response.per_b + ' % )';
+
+
+            window.myLine4.update();
+
+
+        }
+        });
+
+
+    }
+
+    window.myLine4 = new Chart(ctx4, config4);
+
+
+
+
+    function fn_json_24h_total() {
+
+  
+
+
+        $.ajax({
+            type: "get"
+        , async: true
+        , url: "/public/ws/gr_json_MEX111.asp?gmt=" + gmt
+        , dataType: "json"
+        , timeout: 30000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+            var data_v = [], data_l = [], data_s = [];
+ 
+
+            var hhh;
+
+            hhh = '<table width="100%"   border="1" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border:1px #202d37 solid;">';
+            hhh += '<tr>';
+
+
+            hhh += '<td width="90">';
+            hhh += '<table width="100%" border="0" cellpadding="0" cellspacing="0"  >';
+
+            hhh += '<tr>';
+            hhh += '<td width="100%" align="center"  style="color:#eeeeee;background:#2d3b47;font-size:1rem;" height="30">Time</td>';
+            hhh += '</tr>';
+            hhh += '<tr>';
+            hhh += '<td width="100%" align="center" style="color:#c44d2d;" height="40"> Short </td>';
+            hhh += '</tr>';
+            hhh += '<tr>';
+            hhh += '<td width="100%" align="center" style="color:#2196f3;" height="40"> Long </td>';
+            hhh += '</tr>';
+
+            hhh += '</table>';
+            hhh += '</td>';
+
+            response["data"].forEach(function (da) {
+
+
+                hhh += '<td>';
+                hhh += '<table width="100%" border="0" cellpadding="0" cellspacing="0"  >';
+
+                hhh += '<tr>';
+                hhh += '<td width="10%" align="center" style="color:#eeeeee;background:#2d3b47;font-size:1rem;" height="30">' + da.v + '</td>';
+                hhh += '</tr>';
+                hhh += '<tr>';
+                hhh += '<td width="10%" align="center" style="color:#c44d2d;background:#253440;" height="40">' + parseFloat(da.ds).toFixed(2) + ' % </td>';
+                hhh += '</tr>';
+                hhh += '<tr>';
+                hhh += '<td width="10%" align="center" style="color:#2196f3;background:#253440;" height="40">' + parseFloat(da.da).toFixed(2) + ' % </td>';
+                hhh += '</tr>';
+
+                hhh += '</table>';
+                hhh += '</td>';
+            });
+
+            hhh += '</tr>';
+            hhh += '</table>';
+
+            $('#xbt_tot_1hour').html(hhh);
+
+        }
+        });
+
+
+    }
+
+
+
+
+    $(document).ready(function () {
+
+
+        fn_btc_mex();
+
+        var timer21 = setInterval('fn_btc_mex()', 3000);
+
+
+
+        fn_json_gr();
+
+        var timer50 = setInterval('fn_json_gr()', 2100);
+
+/*
+        fn_json_gr2();
+
+        var timer91 = setInterval('fn_json_gr2()', 30000);
+
+*/
+        fn_json_gr3();
+
+        var timer92 = setInterval('fn_json_gr3()', 10000);
+
+
+
+        fn_json_gr4();
+        var timer94 = setInterval('fn_json_gr4()', 5000);
+
+
+
+	      fn_json_24h_total();
+        var timer95 = setInterval('fn_json_24h_total()', 60000);
+
+    });
+
+
+
+
+</script>
+
+
+Process finished with exit code 0
