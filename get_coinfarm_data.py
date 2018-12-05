@@ -26,7 +26,7 @@ class GetCoinfarm(object):
         # 将折线图数据存入csv文件中
         headers = ['v','l','s']
         rows = data_dict['data']
-        with open(self.coin_name+'_line.csv', 'w') as f:
+        with open(self.coin_name+'_line.csv', 'a+') as f:
             f_csv = csv.DictWriter(f, headers)
             f_csv.writeheader()
             f_csv.writerows(rows)
@@ -37,10 +37,11 @@ class GetCoinfarm(object):
         rows = data_dict
         # print('in_in',data_dict)
         # print(type(data_dict))
-        with open(self.coin_name + '_chart.csv', 'w') as f:
+        with open(self.coin_name + '_chart.csv', 'a+') as f:
             f_csv = csv.DictWriter(f, headers)
             f_csv.writeheader()
             f_csv.writerows(rows)
+
 
 if __name__ == '__main__':
 
